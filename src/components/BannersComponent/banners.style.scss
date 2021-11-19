@@ -1,0 +1,82 @@
+@import "../../utils/variables";
+.banners {
+  margin: 50px 0;
+
+  .banners_container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: auto;
+    .banner {
+      width: 50%;
+      position: relative;
+      height: 200px;
+      .banner_info {
+        position: absolute;
+        top: 0;
+        right: 60px;
+        font-size: 1.5em;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 400;
+        button {
+          border-color: transparent;
+          color: black;
+          background-color: white;
+          border-radius: 30px;
+          padding: 10px 20px;
+          font-weight: 400;
+          margin-top: 20px;
+          cursor: pointer;
+          transition: all linear 0.3s;
+          text-transform: capitalize;
+          &:hover {
+            background-color: $mainHoverColor;
+            color: $mainWhite;
+          }
+        }
+      }
+    }
+    .banner1 {
+      background-color: #ffc481;
+      background-image: url(../../assets/banner1.png);
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .banner2 {
+      background-color: #81c4ff;
+      background-image: url(../../assets/banner2.png);
+      background-position: left;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .banner_bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .banners {
+    .banners_container {
+      width: 100%;
+      padding: 10px;
+      .banner {
+        width: 100%;
+        .banner_info {
+          right: 20px;
+        }
+      }
+    }
+  }
+}

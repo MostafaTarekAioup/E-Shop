@@ -1,0 +1,111 @@
+.all_products_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.products_sort {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 1fr auto;
+      grid-template-columns: auto auto 1fr auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  margin: 30px 0;
+  color: #292929;
+}
+
+.products_sort .display_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.products_sort .display_icons .sort_icon {
+  font-size: 1.4em;
+}
+
+.products_sort .display_icons .sort_icon:hover {
+  color: tomato;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.products_sort .line {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+
+.products_sort .sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+}
+
+.products_sort .sort select {
+  padding: 2px;
+  font-size: 1rem;
+  border-color: transparent;
+}
+
+@media only screen and (max-width: 700px) {
+  .all_products_container {
+    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .products_sort {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    gap: 10px;
+    padding: 10px 5px;
+    margin: 10px 0;
+  }
+  .products_sort .display_icons {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    gap: 5px;
+  }
+  .products_sort .line {
+    display: none;
+  }
+  .products_sort .sort {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    gap: 2px;
+  }
+}
+/*# sourceMappingURL=ProductsContainer.style.css.map */

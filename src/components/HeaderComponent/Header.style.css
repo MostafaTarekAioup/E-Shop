@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap");
+.header {
+  width: 100%;
+  min-height: 100%;
+  background-image: url(../../assets/hederImage.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.header .Header_mask {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  background-color: rgba(56, 56, 56, 0.13);
+}
+
+.header .Header_mask .header_details {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.header .Header_mask .header_details h2 {
+  color: #fff;
+  font-size: 2.75em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.header .Header_mask .header_details .shop_btn {
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 35px;
+}
+
+.header .Header_mask .pills {
+  position: absolute;
+  width: 80%;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  border-top-right-radius: 50px;
+}
+
+.header .Header_mask .pills ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .Header_mask .pills ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+}
+
+.header .Header_mask .pills ul li h3 {
+  font-size: 1.01em;
+  font-family: "Poppins", sans-serif;
+}
+
+.header .Header_mask .pills ul li p {
+  font-size: 0.75em;
+  color: gray;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+  .header {
+    min-height: 70vh;
+  }
+  .header .Header_mask {
+    width: 100%;
+    min-height: 70vh;
+    background-color: rgba(56, 56, 56, 0.13);
+  }
+  .header .Header_mask .header_details {
+    top: 20%;
+    left: 10%;
+  }
+  .header .Header_mask .header_details h2 {
+    font-size: 1.75em;
+  }
+  .header .Header_mask .header_details .shop_btn {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 35px;
+  }
+  .header .Header_mask .pills {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Header.style.css.map */

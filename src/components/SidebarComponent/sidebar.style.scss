@@ -1,0 +1,60 @@
+@import "../../utils/variables";
+.side_bar_container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: $mainWhite;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  transform: translateX(-100%);
+  transition: all linear 0.5s;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  ul {
+    list-style-type: none;
+    li {
+      padding: 10px 30px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      margin: 20px 0;
+      text-align: center;
+      cursor: pointer;
+      transition: all linear 0.3s;
+      &:hover {
+        background-color: $mainHoverColor;
+        .nav_btn {
+          color: white;
+        }
+      }
+      .nav_btn {
+        text-decoration: none;
+        color: black;
+        font-size: 1.3em;
+        font-weight: 400;
+      }
+    }
+  }
+  .close_btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    cursor: pointer;
+    &:hover {
+      color: $mainHoverColor;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .active_sidebar {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}

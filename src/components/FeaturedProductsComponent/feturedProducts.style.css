@@ -1,0 +1,57 @@
+.featuren_products_container {
+  margin: 50px 0;
+  padding: 10px;
+}
+
+.featuren_products_container .fetature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.featuren_products_container .fetature p {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.featuren_products_container .fetature button {
+  border-color: transparent;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: all linear 0.3s;
+  transition: all linear 0.3s;
+}
+
+.featuren_products_container .fetature button:hover {
+  color: #fff;
+  background-color: #1a6eff;
+  border: 1ps solid transparent;
+}
+
+@media only screen and (max-width: 700px) {
+  .featuren_products_container .fetature p {
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+  .featuren_products_container .fetature button {
+    font-size: 0.75em;
+  }
+}
+/*# sourceMappingURL=feturedProducts.style.css.map */

@@ -1,0 +1,120 @@
+.apout_us_container {
+  width: 100%;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../../assets/hederImage.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.apout_us_container .mask {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(51, 49, 49, 0.692);
+}
+
+.apout_us_container .mask .apout_us {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+  gap: 30px;
+  margin: 60px 0;
+  padding: 15px;
+}
+
+.apout_us_container .mask .apout_us .Image_apout {
+  width: 100%;
+  height: 500px;
+}
+
+.apout_us_container .mask .apout_us .Image_apout img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.apout_us_container .mask .apout_us .apout_details h2 {
+  font-size: 3em;
+  color: white;
+  text-shadow: 3px 3px 10px white;
+  text-transform: capitalize;
+}
+
+.apout_us_container .mask .apout_us .apout_details .line {
+  width: 120px;
+  height: 5px;
+  margin: 5px 5px;
+  border-radius: 2px;
+  background-color: #005eff;
+}
+
+.apout_us_container .mask .apout_us .apout_details p {
+  line-height: 2;
+  color: white;
+  text-shadow: 3px 3px 10px white;
+  margin: 10px 0;
+}
+
+.apout_us_container .mask .apout_us .apout_details .credits h2 {
+  font-size: 1.75em;
+}
+
+.apout_us_container .mask .apout_us .apout_details .credits span {
+  color: tomato;
+}
+
+.apout_us_container .mask .apout_us .apout_details .credits .social_icons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[5];
+      grid-template-columns: repeat(5, 50px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.apout_us_container .mask .apout_us .apout_details .credits .social_icon {
+  text-decoration: none;
+  color: #fdfdfd;
+  font-size: 1.5em;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  margin: 10px 0;
+}
+
+.apout_us_container .mask .apout_us .apout_details .credits .social_icon:hover {
+  color: #005eff;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@media only screen and (max-width: 800px) {
+  .apout_us_container .mask .apout_us {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .apout_us_container .mask .apout_us .Image_apout {
+    height: 100%;
+  }
+  .apout_us_container .mask .apout_us .Image_apout img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 20px;
+  }
+}
+/*# sourceMappingURL=ApoutUs.style.css.map */

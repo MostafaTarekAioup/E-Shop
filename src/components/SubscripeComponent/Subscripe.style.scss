@@ -1,0 +1,92 @@
+.subscripe_container {
+  margin: 50px 0;
+  .mask {
+    background-image: url(../../assets/subscripeImge.webp);
+    background-position: center;
+    background-size: cover;
+    .subcripe {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.384);
+
+      p {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: white;
+        margin: 60px 80px;
+        line-height: 40px;
+      }
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        label {
+          width: 100%;
+          input {
+            width: 100%;
+            border-color: transparent;
+            height: 48px;
+            border-radius: 50px;
+            padding: 0 20px;
+            outline: transparent;
+          }
+        }
+        button {
+          display: inline-block;
+          width: fit-content;
+          padding: 13px 30px;
+          border-radius: 50px;
+          border-color: transparent;
+          background-color: #1a6eff;
+          color: white;
+          font-size: 0.9em;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin: 0 20px;
+          cursor: pointer;
+          transition: all linear 0.3s;
+          &:hover {
+            background-color: white;
+            color: #1a6eff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .subscripe_container {
+    .mask {
+      .subcripe {
+        grid-template-columns: 1fr;
+        p {
+          margin: 30px 12px;
+        }
+        form {
+          display: grid;
+          grid-template-columns: 1fr;
+          justify-content: space-around;
+          margin-bottom: 20px;
+          padding: 10px;
+          .input_group {
+            width: 90%;
+            margin: 20px auto;
+          }
+          .submit {
+            width: 100%;
+            text-align: center;
+            button {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

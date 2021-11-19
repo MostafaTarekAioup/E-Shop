@@ -1,0 +1,54 @@
+@import "../../utils/variables";
+.featuren_products_container {
+  margin: 50px 0;
+  padding: 10px;
+  .fetature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    p {
+      font-size: 1.5em;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+    button {
+      border-color: transparent;
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 30px;
+      font-size: 1.2em;
+      font-weight: 300;
+      text-transform: capitalize;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: all linear 0.3s;
+      &:hover {
+        color: $mainWhite;
+        background-color: $mainHoverColor;
+        border: 1ps solid transparent;
+      }
+    }
+  }
+  // .single_card_container {
+  //   width: 270px;
+  //   height: 380;
+  // }
+}
+
+@media only screen and (max-width: 700px) {
+  .featuren_products_container {
+    .fetature {
+      p {
+        font-size: 1em;
+        font-weight: 400;
+        text-transform: capitalize;
+      }
+      button {
+        font-size: 0.75em;
+      }
+    }
+  }
+}

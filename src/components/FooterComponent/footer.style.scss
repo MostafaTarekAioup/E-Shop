@@ -1,0 +1,104 @@
+@import "../../utils/variables";
+.footer_content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  padding: 5px;
+  gap: 20px;
+
+  .footer_logo {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: fit-content;
+    .logo {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      gap: 30px;
+      font-size: 1.75em;
+      font-weight: 400;
+
+      .Logo_design {
+        color: $mainHoverColor;
+      }
+    }
+    p {
+      font-size: 13px;
+      color: gray;
+      margin: 20px 0;
+      line-height: 30px;
+    }
+    .social_icons {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+
+      .social_icon {
+        text-decoration: none;
+        color: gray;
+        font-size: 1.5em;
+        // display: inline-block;
+        width: fit-content;
+        &:hover {
+          color: $mainHoverColor;
+        }
+      }
+    }
+  }
+  .footer_groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    .footer_group {
+      h4 {
+        font-size: 1.3em;
+        font-weight: 400;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+      ul {
+        list-style-type: none;
+        li {
+          margin: 15px 0;
+          a {
+            text-decoration: none;
+            color: gray;
+            &:hover {
+              color: $mainHoverColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .footer_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    .footer_logo {
+      display: grid;
+      grid-template-columns: 1fr;
+      .logo {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 30px;
+        font-size: 1.75em;
+        font-weight: 400;
+
+        .Logo_design {
+          color: $mainHoverColor;
+        }
+      }
+      p {
+        font-size: 13px;
+        color: gray;
+        margin: 20px 0;
+        line-height: 30px;
+      }
+    }
+  }
+}
