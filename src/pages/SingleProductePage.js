@@ -1,9 +1,14 @@
 import React from 'react'
-import {UnderConstyuction} from '../components'
+import {BreadCrumb , ProductDetails , ProductDecAndReviewIndex , SelectedForU} from '../components'
 const SingleProductePage = () => {
     return (
         <main>
-            <UnderConstyuction/>
+            <div className="container">
+                <BreadCrumb/>
+                <ProductDetails/>
+                <ProductDecAndReviewIndex/>
+                <SelectedForU/>
+            </div>
         </main>
     )
 }

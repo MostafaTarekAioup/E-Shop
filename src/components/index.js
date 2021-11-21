@@ -14,5 +14,8 @@ import Filters from './FiltersComponent/Filters'
 import BreadCrumb from './BreadcrumbComponent/BreadCrumb'
 import ProductsContainer from './ProductsContainer/ProductsContainer'
 import ScrollToTop from './ScrollToTopRouter'
+import ProductDetails from './ProductsDetailsComponent/ProductDetails'
+import ProductDecAndReviewIndex from './ProductDescription&DetailsComponent/ProductDecAndReviewIndex'
+import SelectedForU from './SelectedForUComponent/SelectedForU'
 
-export {ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 
+export {SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 

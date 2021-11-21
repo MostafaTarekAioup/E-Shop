@@ -1,17 +1,16 @@
 import React, { useRef } from 'react'
 import Glide from 'react-glidejs';
- 
 import 'react-glidejs/dist/index.css';
-import './feturedProducts.style.scss'
-import { Link } from 'react-router-dom';
 import {SingleProduct} from '..'
-const FeatureBroducts = () => {
+import './selectedForU.style.scss'
+import { Link } from 'react-router-dom';
+const SelectedForU = () => {
     const gliderRef = useRef(null);
     return (
         <section className='featuren_products_container'>
             <div className="container">
                 <div className="fetature">
-                    <p>Featured Products</p>
+                    <p>Selected just for you</p>
                     <Link  to='/products'>
                         <button>Show more</button>
                     </Link>
@@ -79,4 +78,4 @@ const FeatureBroducts = () => {
     )
 }
 
-export default FeatureBroducts
+export default SelectedForU

@@ -1,0 +1,301 @@
+
+.Product_description_nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+    .btn{
+        border-color: transparent;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 400;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: 1px solid #FBB03B;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+            background-color:#FBB03B ;
+            color: white;
+        }
+    }
+    .active_btn{
+        background-color:#FBB03B ;
+            color: white;
+    }
+    .reviews_btn{
+        span{
+            font-size: .9em;
+            color: gray;
+
+        }
+    }
+
+}
+.description_container{
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    .description{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h4{
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 1.3em;
+        }
+        p{
+            line-height: 2;
+            color: rgb(36, 35, 35);
+            font-weight: 400;
+        }
+    }
+    .brand{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        ul{
+            list-style-type: none;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            li{
+                color: rgb(32, 28, 28);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                font-weight: 500;
+                gap: 30px;
+                span{
+                    font-size: 1.1em;
+                    font-weight: 500;
+                    color: black;
+                    // margin-right: 50px;
+                }
+            }
+        }
+    }
+}
+
+.reviews_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px 0;
+    gap: 20px;
+    .ratings_container{
+        display: grid;
+        max-height: 250px;
+        max-width: 400px;
+        margin: 0 auto;
+        gap: 40px;
+        .all_ratings_content{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            .total_revirws_rating{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                line-height: 2;
+                .score{
+                    text-align: center;
+                    p{
+                        font-size: 60px;
+                        font-weight: 300;
+                    }
+                }
+                .stars{
+                    text-align: center;
+                    ul{
+                        list-style-type: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        li{
+                            font-size: 1em;
+                            color: #FBB03B;
+                        }
+                    }
+                }
+                .all_reviews_counter{
+                    p{
+                        font-size: .8em;
+                        color: gray;
+                        word-spacing: 3px;
+                    }
+                }
+            }
+            .single_stare_rate{
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                ul{
+                    list-style-type: none;
+                    width: 100%;
+                    height: 100%;
+                    display: grid;
+                   
+                    li{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 1em;
+                        .star{
+                            color: #FBB03B;
+                        }
+                        .progress_par_container{
+                            width: 150px;
+                            background-color: #DBDBDB;
+                            border-radius: 10px;
+                            height: 6px;
+                            overflow: hidden;
+                            .progress_bar{
+                                background-color:#FBB03B ;
+                                height: 100%;
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
+        .add_review_btn{
+            width: 100%;
+           text-align: center;
+           button{
+            border-color: transparent;
+            background-color: #FBB03B;
+            color: black;
+            font-size: 1.1em;
+            word-spacing: 2px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: .3s;
+            cursor: pointer;
+            &:hover{
+                background-color: #ff9d00;
+                color: white;
+            }
+           }
+        }
+        
+    }
+    .user_reviews{
+        ul{
+            list-style-type: none;
+            display: grid;
+            gap: 30px;
+            .single_review{
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                gap: 20px;
+                .user_img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .user_review{
+                    display: grid;
+                    gap: 10px;
+                    .user_name{
+                        p{
+                            font-size: 1.1em;
+                            font-weight: 400;
+                            word-spacing: 5px;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .user_rate{
+                        
+                        ul{
+                            list-style-type: none;
+                            display: flex;
+                            align-items: center;
+                            grid-gap: 5px;
+                            gap: 5px;
+                            li{
+                                color: #FBB03B;
+                            }
+                            
+                        }
+                    }
+                    .user_des{
+                        p{
+                            // white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 100%;
+                            max-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:500px){  
+.Product_description_nav{
+    .btn{
+        font-size: .75em;
+    
+    }
+}
+}
+
+@media only screen and (max-width:700px){  
+        .description_container{
+            grid-template-columns: 1fr;
+            gap: 50px;
+            .description{
+                border-bottom: 1px solid #FBB03B;
+                padding-bottom: 20px;
+                h4{
+                    
+                    font-size: 1.1em;
+                    font-weight: 500;
+                }
+            }
+        }
+        .reviews_container{
+            grid-template-columns:  1fr;
+            gap: 50px;
+            padding: 10px;
+            .ratings_container{
+                max-height: 100%;
+                max-width: 100%;
+                .all_ratings_content{
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+}

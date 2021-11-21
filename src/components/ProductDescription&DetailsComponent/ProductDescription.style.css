@@ -1,0 +1,386 @@
+.Product_description_nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.Product_description_nav .btn {
+  border-color: transparent;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #FBB03B;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Product_description_nav .btn:hover {
+  background-color: #FBB03B;
+  color: white;
+}
+
+.Product_description_nav .active_btn {
+  background-color: #FBB03B;
+  color: white;
+}
+
+.Product_description_nav .reviews_btn span {
+  font-size: .9em;
+  color: gray;
+}
+
+.description_container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description_container .description {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.description_container .description h4 {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.description_container .description p {
+  line-height: 2;
+  color: #242323;
+  font-weight: 400;
+}
+
+.description_container .brand {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description_container .brand ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.description_container .brand ul li {
+  color: #201c1c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  font-weight: 500;
+  gap: 30px;
+}
+
+.description_container .brand ul li span {
+  font-size: 1.1em;
+  font-weight: 500;
+  color: black;
+}
+
+.reviews_container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 50px 0;
+  gap: 20px;
+}
+
+.reviews_container .ratings_container {
+  display: -ms-grid;
+  display: grid;
+  max-height: 250px;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.reviews_container .ratings_container .all_ratings_content {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  line-height: 2;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .score {
+  text-align: center;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .score p {
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .stars {
+  text-align: center;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .stars ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .stars ul li {
+  font-size: 1em;
+  color: #FBB03B;
+}
+
+.reviews_container .ratings_container .all_ratings_content .total_revirws_rating .all_reviews_counter p {
+  font-size: .8em;
+  color: gray;
+  word-spacing: 3px;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate ul {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 1em;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .star {
+  color: #FBB03B;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .progress_par_container {
+  width: 150px;
+  background-color: #DBDBDB;
+  border-radius: 10px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .progress_par_container .progress_bar {
+  background-color: #FBB03B;
+  height: 100%;
+}
+
+.reviews_container .ratings_container .add_review_btn {
+  width: 100%;
+  text-align: center;
+}
+
+.reviews_container .ratings_container .add_review_btn button {
+  border-color: transparent;
+  background-color: #FBB03B;
+  color: black;
+  font-size: 1.1em;
+  word-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.reviews_container .ratings_container .add_review_btn button:hover {
+  background-color: #ff9d00;
+  color: white;
+}
+
+.reviews_container .user_reviews ul {
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+}
+
+.reviews_container .user_reviews ul .single_review {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  gap: 20px;
+}
+
+.reviews_container .user_reviews ul .single_review .user_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.reviews_container .user_reviews ul .single_review .user_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reviews_container .user_reviews ul .single_review .user_review {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+
+.reviews_container .user_reviews ul .single_review .user_review .user_name p {
+  font-size: 1.1em;
+  font-weight: 400;
+  word-spacing: 5px;
+  text-transform: capitalize;
+}
+
+.reviews_container .user_reviews ul .single_review .user_review .user_rate ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 5px;
+  gap: 5px;
+}
+
+.reviews_container .user_reviews ul .single_review .user_review .user_rate ul li {
+  color: #FBB03B;
+}
+
+.reviews_container .user_reviews ul .single_review .user_review .user_des p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+@media only screen and (max-width: 500px) {
+  .Product_description_nav .btn {
+    font-size: .75em;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .description_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .description_container .description {
+    border-bottom: 1px solid #FBB03B;
+    padding-bottom: 20px;
+  }
+  .description_container .description h4 {
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+  .reviews_container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 10px;
+  }
+  .reviews_container .ratings_container {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .reviews_container .ratings_container .all_ratings_content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=ProductDescription.style.css.map */
