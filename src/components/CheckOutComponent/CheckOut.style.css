@@ -1,0 +1,98 @@
+.check_out_container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--second-item-bag);
+  -webkit-box-shadow: 2px 2px 5px var(--second-font-color);
+          box-shadow: 2px 2px 5px var(--second-font-color);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.check_out_container .check_out_details {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+}
+
+.check_out_container .check_out_details p {
+  color: var(--main-text-color);
+  font-size: 1.1em;
+  text-transform: capitalize;
+  font-weight: 300;
+  word-spacing: 10px;
+  margin-left: 10px;
+}
+
+.check_out_container .check_out_details .Subtotal {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: 0;
+}
+
+.check_out_container .check_out {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.check_out_container .check_out p {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  color: var(--main-text-color);
+}
+
+.check_out_container .check_out button {
+  font-size: 1.2em;
+  padding: 10px 30px;
+  text-transform: capitalize;
+  border-color: transparent;
+  background-color: #53b5aa;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  color: var(--main-text-color);
+}
+
+.check_out_container .check_out button:hover {
+  background-color: #096e63;
+  color: white;
+}
+
+@media only screen and (max-width: 450px) {
+  .check_out_container {
+    padding: 10px;
+    display: -ms-grid;
+    display: grid;
+    gap: 20px;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    margin-top: 0;
+  }
+  .check_out_container .check_out_details {
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+  }
+  .check_out_container .check_out_details .Subtotal {
+    font-size: 1.3em;
+  }
+  .check_out_container .check_out p {
+    font-size: 1.3em;
+  }
+}
+/*# sourceMappingURL=CheckOut.style.css.map */

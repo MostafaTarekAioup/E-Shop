@@ -86,18 +86,20 @@
 .single_product_details_container .single_product_details .product_details .product_name_price h2 {
   font-size: 30px;
   font-weight: 400;
+  color: var(--main-text-color);
 }
 
 .single_product_details_container .single_product_details .product_details .product_name_price p {
   font-size: 30px;
   font-weight: 500;
-  color: #FF0000;
+  color: var(--second-hover-color);
 }
 
 .single_product_details_container .single_product_details .product_details .colors p {
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 300;
   margin: 20px 0;
+  color: var(--main-text-color);
 }
 
 .single_product_details_container .single_product_details .product_details .colors ul {
@@ -112,9 +114,14 @@
 .single_product_details_container .single_product_details .product_details .colors ul li {
   width: 40px;
   height: 40px;
-  border: 8px solid #E6E6E6;
+  border: 8px solid var(--item-background);
   padding: 2px;
   border-radius: 5px;
+}
+
+.single_product_details_container .single_product_details .product_details .colors ul li:hover {
+  border: 8px solid var(--hover-color);
+  cursor: pointer;
 }
 
 .single_product_details_container .single_product_details .product_details .colors ul li:nth-of-type(1) {
@@ -156,11 +163,11 @@
   width: fit-content;
   font-size: 1.5em;
   gap: 30px;
-  border: 1px solid gray;
+  border: 1px solid var(--second-font-color);
   border-radius: 50px;
   padding: 10px 20px;
   font-weight: 900;
-  color: #292828;
+  color: var(--main-text-color);
 }
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .quantity ul li {
@@ -180,7 +187,7 @@
   width: 100%;
   border-color: transparent;
   background-color: #FBB03B;
-  color: white;
+  color: var(--main-text-color);
   font-size: 1.2em;
   word-spacing: 2px;
   font-weight: 400;
@@ -194,6 +201,7 @@
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .add_to_cart_btn button:hover {
   background-color: #fa9b03;
+  color: white;
 }
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .favorits_btn {
@@ -209,12 +217,13 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid gray;
+  border: 1px solid var(--second-font-color);
   font-size: 20px;
   margin-left: 20px;
   -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
+  color: var(--main-text-color);
 }
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .favorits_btn:hover {

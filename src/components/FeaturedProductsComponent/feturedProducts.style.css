@@ -22,11 +22,12 @@
   font-size: 1.5em;
   font-weight: 400;
   text-transform: capitalize;
+  color: var(--main-text-color);
 }
 
 .featuren_products_container .fetature button {
   border-color: transparent;
-  background-color: white;
+  background-color: var(--second-item-bag);
   border: 1px solid gray;
   border-radius: 30px;
   font-size: 1.2em;
@@ -41,7 +42,7 @@
 .featuren_products_container .fetature button:hover {
   color: #fff;
   background-color: #1a6eff;
-  border: 1ps solid transparent;
+  border: 1px solid transparent;
 }
 
 @media only screen and (max-width: 700px) {

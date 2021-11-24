@@ -13,10 +13,11 @@
       font-size: 1.5em;
       font-weight: 400;
       text-transform: capitalize;
+      color: var(--main-text-color);
     }
     button {
       border-color: transparent;
-      background-color: white;
+      background-color: var(--second-item-bag);
       border: 1px solid gray;
       border-radius: 30px;
       font-size: 1.2em;
@@ -28,7 +29,7 @@
       &:hover {
         color: $mainWhite;
         background-color: $mainHoverColor;
-        border: 1ps solid transparent;
+        border: 1px solid transparent;
       }
     }
   }

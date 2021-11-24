@@ -1,5 +1,4 @@
-import './App.css';
-import styled from 'styled-components'
+import './App.scss';
 import { BrowserRouter as Router , Switch , Route } from 'react-router-dom';
 import {Home, About , Cart , Error , Products , SinglrProduct , CheckOut , PrivateRoute} from './pages'
 import {ScrollToTop} from './components'

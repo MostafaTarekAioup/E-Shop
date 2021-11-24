@@ -26,8 +26,8 @@
         font-weight: 400;
         button {
           border-color: transparent;
-          color: black;
-          background-color: white;
+          color: var(--main-text-color);
+          background-color: var(--second-item-bag);
           border-radius: 30px;
           padding: 10px 20px;
           font-weight: 400;
@@ -70,7 +70,7 @@
   .banners {
     .banners_container {
       width: 100%;
-      padding: 10px;
+      padding: 0;
       .banner {
         width: 100%;
         .banner_info {

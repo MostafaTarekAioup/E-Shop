@@ -1,7 +1,14 @@
 .breadCrumb_container {
   width: 100%;
   margin-top: 70px;
-  background-color: #f7dcb5;
-  padding: 20px 10px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: .9em;
+  color: var(--main-text-color);
 }
 /*# sourceMappingURL=Breadcrumb.style.css.map */

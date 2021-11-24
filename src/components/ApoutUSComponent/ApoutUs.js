@@ -15,9 +15,9 @@ const ApoutUs = () => {
                             <div className='apout_details'>
                                 <h2>Our Story</h2>
                                 <div className="line"></div>
-                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusantium sapiente tempora sed dolore esse deserunt eaque excepturi, delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt sequi blanditiis est exercitationem molestiae delectus saepe odio eligendi modi porro eaque in libero minus unde sapiente consectetur architecto. Ullam rerum, nemo iste ex, eaque perspiciatis nisi, eum totam velit.</p> 
+                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusantium sapiente tempora sed dolore esse deserunt eaque excepturi, delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt sequi blanditiis est exercitationem molestiae delectus saepe odio </p> 
                                <div className="credits">
-                                   <h2>Developer</h2>
+                                   <h2>Contact Me</h2>
                                    <div className="line"></div>
                                    <p>This Website developed by <span>Mostafa Tarek</span> a Front-End React developer</p>
                                    <div className="social_icons">

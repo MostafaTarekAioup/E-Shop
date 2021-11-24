@@ -6,26 +6,30 @@
     width: 100%;
     font-size: 1.75em;
     font-weight: 300;
+    color: var(--main-text-color);
     text-align: center;
     margin: 50px 0;
   }
   .advantages {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 40px;
 
     .advantage {
       line-height: 30px;
+      box-shadow: 1px 1px 3px gray;
+      transition: all linear 0.3s;
       padding: 10px;
+      background-color: var(--second-item-bag);
       &:hover .advantage_icon {
         color: #1a6eff;
         background-color: #e1ecff;
-        transition: all linear 0.3s;
+        
       }
       &:hover {
-        background-color: #f6f6f6;
+        background-color: var(--item-hover-color);
         cursor: pointer;
         transition: all linear 0.3s;
         border-radius: 20px;
@@ -43,6 +47,7 @@
       }
       .advantage_details {
         h4 {
+          color: var(--main-text-color);
           margin: 20px 0;
           font-size: 1.4em;
           font-weight: 300;
@@ -50,7 +55,7 @@
         p {
           font-size: 0.9em;
           font-weight: 400;
-          color: gray;
+          color: var(--second-font-color);
           line-height: 30px;
         }
       }

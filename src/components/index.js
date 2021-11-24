@@ -17,5 +17,7 @@ import ScrollToTop from './ScrollToTopRouter'
 import ProductDetails from './ProductsDetailsComponent/ProductDetails'
 import ProductDecAndReviewIndex from './ProductDescription&DetailsComponent/ProductDecAndReviewIndex'
 import SelectedForU from './SelectedForUComponent/SelectedForU'
+import CartComponent from './CartComponent/CartComponent'
+import  CheckOut from '../components/CheckOutComponent/CheckOut'
 
-export {SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 
+export {CheckOut,CartComponent,SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 

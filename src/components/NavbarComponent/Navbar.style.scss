@@ -1,6 +1,8 @@
 @import "../../utils/variables";
 
 .Navbar {
+  background-color: var(--main-background-color);
+  box-shadow: gray 2px 2px 8px;
   width: 100%;
   position: fixed;
   top: 0;
@@ -14,10 +16,19 @@
     justify-content: space-between;
     align-items: center;
     .logo {
-      text-decoration: none;
-      color: $mainWhite;
-      .second_logo {
-        display: none;
+      text-decoration: none;  
+      color: var(--main-text-color);
+    }
+    .second_logo {
+      display: block;
+      .filter_svg{
+        fill: var(--main-text-color) ;
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
       }
     }
     .second_nav {
@@ -27,13 +38,16 @@
       list-style-type: none;
       gap: 20px;
       li {
-        // margin: 10px 20px;
         .nav_btn {
           text-decoration: none;
-          color: $mainWhite;
+          color: var(--main-text-color);
+          cursor: pointer;
           &:hover {
             color: $mainHoverColor;
           }
+        }
+        .active_nav{
+          color: $mainHoverColor !important;
         }
       }
     }
@@ -47,10 +61,13 @@
         margin: 10px 20px;
         .nav_btn {
           text-decoration: none;
-          color: $mainWhite;
+          color: var(--main-text-color);
           &:hover {
             color: $mainHoverColor;
           }
+        }
+        .active_nav{
+          color: $mainHoverColor !important;
         }
       }
     }
@@ -63,60 +80,15 @@
     }
   }
 }
-.whiteNav {
-  background-color: $mainWhite;
-  box-shadow: gray 2px 2px 10px;
-  nav {
-    .logo {
-      color: black;
-      img {
-        display: none;
-      }
-      .second_logo {
-        display: block;
-        p {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-        }
-      }
-    }
-    .second_nav {
-      li {
-        .nav_btn {
-          text-decoration: none;
-          color: black;
-          &:hover {
-            color: $mainHoverColor;
-          }
-        }
-      }
-    }
-    .Nav_links {
-      li {
-        .nav_btn {
-          color: black;
-          &:hover {
-            color: $mainHoverColor;
-          }
-        }
-      }
-    }
-  }
-  .sidebar_icon {
-    display: none;
-    color: black;
-  }
-}
+
 @media only screen and (max-width: 700px) {
   .Navbar {
-    padding: 5px 10px;
-    background-color: $mainWhite;
-    box-shadow: gray 5px 5px 20px;
+    padding: 15px 10px;
+    background-color: var(--main-background-color);
+    box-shadow: gray 2px 2px 8px;
     nav {
       .logo {
-        color: black;
+        color: var(--main-text-color);
         img {
           display: none;
         }
@@ -134,7 +106,7 @@
         li {
           .nav_btn {
             text-decoration: none;
-            color: black;
+            color: var(--main-text-color);
             &:hover {
               color: $mainHoverColor;
             }
@@ -147,7 +119,7 @@
     }
     .sidebar_icon {
       display: block;
-      color: black;
+      color: var(--main-text-color);
     }
   }
 }

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "./utils/variables";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.light_theme{
+  --main-background-color: #{$backGroundColor};
+  --main-text-color: #{$fontColor};
+  // --black-font-color: #{$fontColor};
+  --item-background: #{$itemBackground};
+  --second-item-bag:#{$secondItemBag};
+  --second-font-color:#{$grayFontColor};
+  --hover-color:#{$hoverColor};
+  --second-hover-color:#{$secondHoverColorDark};
+  --item-hover-color:#{$itemHoverColor};
+  --scroll-background:#{$scrollItemBckground};
+  --scroll-thumb:#{$scrollThumb};
+
+}
+.dark_theme{
+  --main-background-color: #{$mainBackgroundDark};
+  --main-text-color: #{$fontColorDark};
+  --item-background: #{$itemBackgroundDark};
+  --second-item-bag:#{$secondItemBagDark};
+  --second-font-color: #{$grayFontColorDark};
+  --hover-color:#{$hoverColor};
+  --second-hover-color:#{$secondHoverColor};
+  --item-hover-color:#{$hoverColorDark};
+  --scroll-background:#{$scrollItemBckgroundDark};
+  --scroll-thumb:#{$scrollThumbDark};
+  
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+body {
+  overflow-x: hidden;
+  background-color: var(--main-background-color);
+  transition: all linear .3s;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--scroll-background);
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-color);
+}

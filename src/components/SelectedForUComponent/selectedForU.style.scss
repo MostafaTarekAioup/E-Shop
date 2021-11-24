@@ -13,10 +13,12 @@
       font-size: 1.5em;
       font-weight: 400;
       text-transform: capitalize;
+      color: var(--main-text-color);
     }
     button {
       border-color: transparent;
-      background-color: white;
+      background-color: var(--second-item-bag);
+      color:var(--main-text-color) ;
       border: 1px solid gray;
       border-radius: 30px;
       font-size: 1.2em;
@@ -32,10 +34,6 @@
       }
     }
   }
-  // .single_card_container {
-  //   width: 270px;
-  //   height: 380;
-  // }
 }
 
 @media only screen and (max-width: 700px) {

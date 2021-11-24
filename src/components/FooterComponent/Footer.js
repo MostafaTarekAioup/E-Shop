@@ -1,10 +1,12 @@
 import React from 'react'
 import './footer.style.scss'
 import { FaFacebookF , FaTwitter , FaLinkedinIn , FaInstagram , FaYoutube } from "react-icons/fa";
+import {Subscripe} from '../'
 const Footer = () => {
     return (
         <footer>
             <div className="container">
+                <Subscripe/>
                 <div className="footer_content">
                     <div className="footer_logo">
                             <h3 className="logo">

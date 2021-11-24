@@ -6,7 +6,6 @@
   background-image: url(../../assets/hederImage.webp);
   background-size: cover;
   background-position: center;
-
   .Header_mask {
     width: 100%;
     position: relative;
@@ -14,7 +13,6 @@
     background-color: rgba(56, 56, 56, 0.13);
     .header_details {
       position: absolute;
-      //   width: 100%;
       top: 30%;
       left: 20%;
       h2 {
@@ -38,7 +36,7 @@
     .pills {
       position: absolute;
       width: 80%;
-      background-color: $mainWhite;
+      background-color: var(--item-background);
       bottom: 0;
       left: 0;
       padding: 20px;
@@ -60,10 +58,11 @@
           h3 {
             font-size: 1.01em;
             font-family: "Poppins", sans-serif;
+            color: var(--main-text-color);
           }
           p {
             font-size: 0.75em;
-            color: gray;
+            color: var(--second-font-color);
             font-weight: bold;
             font-family: "Poppins", sans-serif;
           }
@@ -72,19 +71,77 @@
     }
   }
 }
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 900px) {
   .header {
-    min-height: 70vh;
     .Header_mask {
       width: 100%;
-      min-height: 70vh;
       background-color: rgba(56, 56, 56, 0.13);
       .header_details {
-        top: 20%;
+        top: 40%;
         left: 10%;
         h2 {
-          font-size: 1.75em;
+          font-size: 1.5em;
+        }
+        .shop_btn {
+          color: $mainWhite;
+          display: inline-block;
+          text-decoration: none;
+          font-family: "Poppins", sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-top: 35px;
+        }
+      }
+      .pills {
+        width: 100%;
+        background-color: var(--second-item-bag);
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        border-top-right-radius: 50px;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+          list-style-type: none;
+          align-items: center;
+          justify-content: space-between;
+          li {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            // align-items: center;
+            padding: 0 10px;
+  
+            h3 {
+              font-size: .8em;
+              font-family: "Poppins", sans-serif;
+              color: var(--main-text-color);
+            }
+            p {
+              font-size: 0.6em;
+              color: var(--second-font-color);
+              font-weight: bold;
+              font-family: "Poppins", sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .header {
+    min-height: 50vh;
+    .Header_mask {
+      width: 100%;
+      min-height: 50vh;
+      background-color: rgba(56, 56, 56, 0.13);
+      .header_details {
+        top: 40%;
+        left: 10%;
+        h2 {
+          font-size: 1.5em;
         }
         .shop_btn {
           color: $mainWhite;

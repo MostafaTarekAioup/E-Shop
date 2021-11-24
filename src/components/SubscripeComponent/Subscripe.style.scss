@@ -1,5 +1,5 @@
 .subscripe_container {
-  margin: 50px 0;
+  margin-top: 50px;
   .mask {
     background-image: url(../../assets/subscripeImge.webp);
     background-position: center;
@@ -17,7 +17,7 @@
         font-weight: 400;
         color: white;
         margin: 60px 80px;
-        line-height: 40px;
+        line-height: 1.5;
       }
       form {
         display: grid;
@@ -60,13 +60,13 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
   .subscripe_container {
     .mask {
       .subcripe {
         grid-template-columns: 1fr;
         p {
-          margin: 30px 12px;
+          margin: 20px 12px;
         }
         form {
           display: grid;

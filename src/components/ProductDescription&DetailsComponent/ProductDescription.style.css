@@ -23,6 +23,7 @@
   border: 1px solid #FBB03B;
   background-color: transparent;
   cursor: pointer;
+  color: var(--main-text-color);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -76,11 +77,12 @@
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 1.3em;
+  color: var(--main-text-color);
 }
 
 .description_container .description p {
   line-height: 2;
-  color: #242323;
+  color: var(--second-font-color);
   font-weight: 400;
 }
 
@@ -111,7 +113,7 @@
 }
 
 .description_container .brand ul li {
-  color: #201c1c;
+  color: var(--second-font-color);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -123,7 +125,7 @@
 .description_container .brand ul li span {
   font-size: 1.1em;
   font-weight: 500;
-  color: black;
+  color: var(--main-text-color);
 }
 
 .reviews_container {
@@ -171,6 +173,7 @@
 
 .reviews_container .ratings_container .all_ratings_content .total_revirws_rating .score {
   text-align: center;
+  color: var(--main-text-color);
 }
 
 .reviews_container .ratings_container .all_ratings_content .total_revirws_rating .score p {
@@ -203,7 +206,7 @@
 
 .reviews_container .ratings_container .all_ratings_content .total_revirws_rating .all_reviews_counter p {
   font-size: .8em;
-  color: gray;
+  color: var(--second-font-color);
   word-spacing: 3px;
 }
 
@@ -239,6 +242,7 @@
           align-items: center;
   gap: 10px;
   font-size: 1em;
+  color: var(--main-text-color);
 }
 
 .reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .star {
@@ -266,7 +270,7 @@
 .reviews_container .ratings_container .add_review_btn button {
   border-color: transparent;
   background-color: #FBB03B;
-  color: black;
+  color: var(--main-text-color);
   font-size: 1.1em;
   word-spacing: 2px;
   font-weight: 400;
@@ -323,6 +327,7 @@
   font-weight: 400;
   word-spacing: 5px;
   text-transform: capitalize;
+  color: var(--main-text-color);
 }
 
 .reviews_container .user_reviews ul .single_review .user_review .user_rate ul {
@@ -346,6 +351,7 @@
   text-overflow: ellipsis;
   max-width: 100%;
   max-height: 40px;
+  color: var(--second-font-color);
 }
 
 @media only screen and (max-width: 500px) {

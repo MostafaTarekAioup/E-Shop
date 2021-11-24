@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link , NavLink } from 'react-router-dom'
 import { FaTimes } from "react-icons/fa";
 import './sidebar.style.scss'
 import {useGlopalContext} from '../../ContextAPI/context'
@@ -13,19 +13,41 @@ const Sidebar = () => {
             </div>
             <ul>
                 <li>
-                    <Link className='nav_btn' to='/' onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}>
+                    <NavLink
+                            exact 
+                            to="/"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                            onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}
+                        >
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
+
                 <li>
-                    <Link className='nav_btn' to='/apout' onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}>
+                    <NavLink
+                            exact 
+                            to="/apout"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                            onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}
+                        >
                         About
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link className='nav_btn' to='/products' onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}>
+                    <NavLink
+                            exact 
+                            to="/products"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                            onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}
+                        >
                         Products
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </div>

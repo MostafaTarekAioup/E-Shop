@@ -31,15 +31,20 @@
   gap: 30px;
   font-size: 1.75em;
   font-weight: 400;
+  fill: var(--main-text-color);
 }
 
 .footer_content .footer_logo .logo .Logo_design {
   color: #1a6eff;
 }
 
+.footer_content .footer_logo .logo .logo_title {
+  color: var(--main-text-color);
+}
+
 .footer_content .footer_logo p {
   font-size: 13px;
-  color: gray;
+  color: var(--second-font-color);
   margin: 20px 0;
   line-height: 30px;
 }
@@ -52,11 +57,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 300px;
 }
 
 .footer_content .footer_logo .social_icons .social_icon {
   text-decoration: none;
-  color: gray;
+  color: var(--second-font-color);
   font-size: 1.5em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -78,7 +84,10 @@
   font-size: 1.3em;
   font-weight: 400;
   margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px var(--second-font-color);
   margin-top: 20px;
+  color: var(--main-text-color);
 }
 
 .footer_content .footer_groups .footer_group ul {
@@ -91,14 +100,14 @@
 
 .footer_content .footer_groups .footer_group ul li a {
   text-decoration: none;
-  color: gray;
+  color: var(--second-font-color);
 }
 
 .footer_content .footer_groups .footer_group ul li a:hover {
   color: #1a6eff;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 950px) {
   .footer_content {
     width: 100%;
     display: -ms-grid;

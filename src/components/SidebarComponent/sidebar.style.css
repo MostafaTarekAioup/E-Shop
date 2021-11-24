@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: var(--main-background-color);
   top: 0;
   left: 0;
   z-index: 999;
@@ -37,7 +37,7 @@
 }
 
 .side_bar_container ul li:hover {
-  background-color: #1a6eff;
+  background-color: var(--hover-color);
 }
 
 .side_bar_container ul li:hover .nav_btn {
@@ -46,9 +46,13 @@
 
 .side_bar_container ul li .nav_btn {
   text-decoration: none;
-  color: black;
+  color: var(--main-text-color);
   font-size: 1.3em;
   font-weight: 400;
+}
+
+.side_bar_container ul li .active_nav {
+  color: #1a6eff;
 }
 
 .side_bar_container .close_btn {
@@ -66,6 +70,7 @@
           align-items: center;
   font-size: 1.75em;
   cursor: pointer;
+  color: var(--main-text-color);
 }
 
 .side_bar_container .close_btn:hover {

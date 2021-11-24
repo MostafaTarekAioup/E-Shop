@@ -1,11 +1,10 @@
 import React , {useEffect} from 'react'
-import { Link } from 'react-router-dom'
-import { FaBars , FaUserAlt , FaShoppingCart } from "react-icons/fa";
-import logo from '../../assets/logo.svg'
+import { Link  , NavLink} from 'react-router-dom'
+import { FaBars , FaUserAlt , FaShoppingCart ,FaMoon , FaSun} from "react-icons/fa";
 import './Navbar.style.scss'
 import {useGlopalContext} from '../../ContextAPI/context'
 const Navbar = () => {
-    const {isSubmenuOpen , setIsSubmenuOpen , navbarColor , setNavbarColor} = useGlopalContext()
+    const {isSubmenuOpen , setIsSubmenuOpen  , setNavbarColor , isDark , setIsDark} = useGlopalContext()
     const toggleVisibility = () => {
     if (window.pageYOffset > 50) {
       setNavbarColor(true)
@@ -16,38 +15,57 @@ const Navbar = () => {
   useEffect(()=>{
       window.addEventListener("scroll", toggleVisibility);
   },[])
+  
+  useEffect(()=>{
+    document.documentElement.className = isDark
+    localStorage.setItem('theme' , isDark)
+  },[isDark])
 return <>
-    <div className={`${navbarColor?'Navbar whiteNav':'Navbar whiteNav'}`}>
+    <div className='Navbar'>
         <div className="container">
             <nav>
             <Link className='logo nav_btn' to='/'>
-                <img src={logo} alt="" />
                 <div className="second_logo">
                     <p>
-                        <svg className='' xmlns="http://www.w3.org/2000/svg" width="42.996" height="32.879" viewBox="0 0 42.996 32.879">
+                        <svg className='filter_svg' xmlns="http://www.w3.org/2000/svg" width="42.996" height="32.879" viewBox="0 0 42.996 32.879">
                             <path id="noun_cloth_2129414" d="M436.271,456.879a1.263,1.263,0,0,1-1.22-.814l-3.062-8.038H418.527A2.527,2.527,0,0,1,416,445.5V426.529A2.528,2.528,0,0,1,418.532,424h17.7a1.264,1.264,0,0,1,1.144.726l3.823,8.126h15.267A2.527,2.527,0,0,1,459,435.381V454.35a2.528,2.528,0,0,1-2.532,2.529Zm-.84-30.35h-16.9s0,6.323,0,18.969h25.828Zm6.961,8.852,5.1,10.842a1.265,1.265,0,0,1-.312,1.49L439.6,454.35h16.864s0-6.323,0-18.969Zm-5.624,18.085,6.216-5.439H434.7Z" transform="translate(-416 -424)"/>
                         </svg>
                         E-shop
                     </p>
                 </div>
-
             </Link>
 
             <ul className='Nav_links'>
-                <li>
-                    <Link className='nav_btn' to='/'>
+                <li>    
+                    <NavLink
+                            exact 
+                            to="/"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                        >
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link className='nav_btn' to='/apout'>
+                    <NavLink
+                            to="/apout"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                        >
                         About
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link className='nav_btn' to='/products'>
+                    <NavLink
+                            to="/products"
+                            className={isActive =>
+                                "nav_btn"  + (!isActive ? " " : " active_nav")
+                            }
+                        >
                         Products
-                    </Link>
+                    </NavLink>
                 </li>
                 
                 
@@ -59,9 +77,15 @@ return <>
                     </Link>
                 </li>
                 <li>
-                     <Link className='nav_btn' to='/cart'>
+                     <Link className='nav_btn' to='/privateRoute'>
                         <FaUserAlt/>
                     </Link>
+                </li>
+                <li>
+                     <p className='nav_btn'>
+                        {isDark ==='dark_theme' && <FaSun onClick={()=>{setIsDark('light_theme')}}/>}
+                        {isDark ==='light_theme' && <FaMoon onClick={()=>{setIsDark('dark_theme')}}/>}
+                    </p>
                 </li>
                 <li>
                     <div className="sidebar_icon" onClick={()=>setIsSubmenuOpen(!isSubmenuOpen)}>

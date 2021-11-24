@@ -3,7 +3,7 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: $mainWhite;
+  background-color: var(--main-background-color);
   top: 0;
   left: 0;
   z-index: 999;
@@ -24,16 +24,20 @@
       cursor: pointer;
       transition: all linear 0.3s;
       &:hover {
-        background-color: $mainHoverColor;
+        background-color: var(--hover-color);
         .nav_btn {
           color: white;
         }
+        
       }
       .nav_btn {
         text-decoration: none;
-        color: black;
+        color: var(--main-text-color);
         font-size: 1.3em;
         font-weight: 400;
+      }
+      .active_nav{
+        color: $mainHoverColor;
       }
     }
   }
@@ -46,6 +50,7 @@
     align-items: center;
     font-size: 1.75em;
     cursor: pointer;
+    color: var(--main-text-color);
     &:hover {
       color: $mainHoverColor;
     }
