@@ -1,14 +1,13 @@
 import React from 'react'
 import './singleProduct.style.scss'
-import productImg from '../../assets/apoutImg.webp'
-import { FaSearch , FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-const SingleProduct = () => {
+const SingleProduct = ({id ,image , name , colors , price}) => {
     return (
         <article>
             <div className="Product">
                 <div className="product_image">
-                    <img src={productImg} alt="name" />
+                    <img src={image} alt={name} />
                 </div>
                 
                 <div className="Product_info">
@@ -16,19 +15,18 @@ const SingleProduct = () => {
                         <FaHeart className='productLink_icon'/>
                     </div>
                     <div className="info_cont">
-                        <p className='product_name'>Holmustund</p>
-                        <p className='price'>$1999.99</p>
+                        <p className='product_name'>{name}</p>
+                        <p className='price'>${price}</p>
                         <div className="product_colors">
                             <p>Colors</p>
                             <ul>
-                                
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                               {colors.map((color , index)=>{
+                                   return <li key={index} style={{backgroundColor:color}}></li>
+                               })}
                             </ul>
                         </div>
                         <div className="btn_container">
-                            <Link className='nav_btn' to='/product/:id'>
+                            <Link className='nav_btn' to={`/product/${id}`}>
                                 <button className='by_now_btn'>By Now</button>
                             </Link>
                         </div>

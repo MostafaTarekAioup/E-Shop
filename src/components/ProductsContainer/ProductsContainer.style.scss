@@ -3,11 +3,16 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
 }
+.all_products_container_style_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
 .products_sort {
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  justify-content: center;
+  grid-template-columns: auto 1fr auto;
+  justify-content: space-between;
   gap: 2rem;
   align-items: center;
   padding: 10px 20px;
@@ -60,7 +65,7 @@
   .products_sort {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: space-between;
     gap: 20px;
     padding: 0;
     margin:  10px 0;

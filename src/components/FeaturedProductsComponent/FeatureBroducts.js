@@ -1,12 +1,13 @@
 import React, { useRef } from 'react'
 import Glide from 'react-glidejs';
- 
+import { useSelector } from 'react-redux'
 import 'react-glidejs/dist/index.css';
 import './feturedProducts.style.scss'
 import { Link } from 'react-router-dom';
 import {SingleProduct} from '..'
 const FeatureBroducts = () => {
     const gliderRef = useRef(null);
+    const products = useSelector((state)=> state.products.products)
     return (
         <section className='featuren_products_container'>
             <div className="container">
@@ -44,33 +45,14 @@ const FeatureBroducts = () => {
                         startAt={2}
                         slideClassName="slider__frame"
                         focusAt="center">
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
-                        <div className='single_card_container'>
-                            <SingleProduct/>
-                        </div>
+                        
+                        {
+                            products.map((product)=>{
+                                return <div key={product.id} className='single_card_container'>
+                                <SingleProduct {...product}/>
+                            </div>
+                            })
+                        }
                     </Glide>  
                 </div>
                 

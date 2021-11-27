@@ -107,15 +107,6 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            &:nth-of-type(1) {
-              background-color: tomato;
-            }
-            &:nth-of-type(2) {
-              background-color: red;
-            }
-            &:nth-of-type(3) {
-              background-color: rgb(255, 0, 98);
-            }
           }
         }
       }

@@ -2,8 +2,16 @@ import React from 'react'
 import './Filters.style.scss'
 import { FaAngleUp , FaAngleDown , FaCog } from "react-icons/fa";
 import {useGlopalContext} from '../../ContextAPI/context'
+import { useSelector  } from 'react-redux';
 const Filters = () => {
     const {isCatagori , setIsGategory , isCompany , setIsCompany , isColors , setIsColors , isPrice , setIsPrice ,isFilterActive , setIsFilterActive} = useGlopalContext()
+    const products = useSelector((state)=> state.products.products)
+    const categories = []
+    products.map((product)=>{
+        categories.push(product.category)
+        return categories
+    })
+    const uniqueGatecories = [...new Set(categories)]
     return (
         <section className='filters_component'>
             <div className="filters_icon" onClick = {()=>setIsFilterActive(!isFilterActive)}>
@@ -20,12 +28,11 @@ const Filters = () => {
                 <div className={`${isCatagori? 'catagories_content catagories_content_Active' : 'catagories_content'}`}>
                     <ul>
                         <li>All</li>
-                        <li>Office</li>
-                        <li>Living Room</li>
-                        <li>Kitchen</li>
-                        <li>Bedroom</li>
-                        <li>Dining</li>
-                        <li>Kids</li>
+                        {
+                            uniqueGatecories.map((cat , index)=>{
+                                return <li key = {index}>{cat}</li>
+                            })
+                        }
                     </ul>
                 </div>
             </div>

@@ -1,18 +1,16 @@
 import React from 'react'
 import './ProductsContainer.style.scss'
 import {SingleProduct} from '../../components'
-import { FaListAlt , FaTh } from "react-icons/fa";
+import {useSelector } from 'react-redux'
+// import { FaListAlt , FaTh } from "react-icons/fa";
+
 const ProductsContainer = () => {
-    
-    return (
-        <section>
+    const products = useSelector((state)=>state.products.products)   
+    return <>
+             <section>
             <div className="products_sort">
-                <div className="display_icons">
-                    <FaTh className='sort_icon'/>
-                    <FaListAlt className='sort_icon'/>
-                </div>
                 <div className="items_found">
-                    <p>23 Items Found</p>
+                    <p>{products.length} Items Found</p>
                 </div>
                 <div className="line"></div>
                 <div className="sort">
@@ -26,75 +24,13 @@ const ProductsContainer = () => {
                 </div>
             </div>
             <div className="all_products_container">
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
+                {products.map((product)=>{
+                    const  {id} = product
+                    return <SingleProduct key={id} {...product}/>
+                })}
             </div>
         </section>
-    )
+    </>
 }
 
 export default ProductsContainer

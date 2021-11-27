@@ -1,4 +1,5 @@
-import React ,{useContext , useState ,useEffect} from 'react'
+
+import React ,{useContext , useState } from 'react'
 
 const AppContext = React.createContext()
 const getStorageTheme = ()=>{
@@ -17,6 +18,7 @@ const AppProvider = ({children})=>{
     const [isPrice , setIsPrice] = useState(true)
     const [isFilterActive , setIsFilterActive] = useState(false)
     const [isDark , setIsDark] = useState(getStorageTheme())
+    const [loading , setLoading] = useState(true)
 
     return <AppContext.Provider value={{
         isSubmenuOpen , setIsSubmenuOpen,
@@ -26,7 +28,8 @@ const AppProvider = ({children})=>{
         isColors , setIsColors,
         isPrice , setIsPrice,
         isFilterActive , setIsFilterActive,
-        isDark , setIsDark
+        isDark , setIsDark ,
+        loading , setLoading
     }}>{children}</AppContext.Provider>
 }
 export const useGlopalContext =()=>{

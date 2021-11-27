@@ -19,5 +19,6 @@ import ProductDecAndReviewIndex from './ProductDescription&DetailsComponent/Prod
 import SelectedForU from './SelectedForUComponent/SelectedForU'
 import CartComponent from './CartComponent/CartComponent'
 import  CheckOut from '../components/CheckOutComponent/CheckOut'
+import Loading from './LoadingComponent/Loading'
 
-export {CheckOut,CartComponent,SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 
+export {Loading,CheckOut,CartComponent,SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 

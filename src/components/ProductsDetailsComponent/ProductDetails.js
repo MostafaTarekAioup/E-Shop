@@ -1,67 +1,66 @@
-import React , {useState} from 'react'
-import Image1 from '../../assets/tempImages/1.jpg'
-import Image2 from '../../assets/tempImages/2.jpg'
-import Image3 from '../../assets/tempImages/3.jpg'
-import Image4 from '../../assets/tempImages/4.jpg'
-import Image5 from '../../assets/tempImages/5.jpg'
-import { FaHeart } from "react-icons/fa";
+import React , {useState , useEffect} from 'react'
+import { FaHeart } from "react-icons/fa"
+import { useParams } from 'react-router'
+import axios from 'axios'
 import './ProductDetails.style.scss'
+import {Loading} from '../'
 const ProductDetails = () => {
     const [imageIndex , setImageIndex] = useState(0)
-    const imagesGallary = [
-        {
-            id:1,
-            image:Image1
-        },
-        {
-            id:2,
-            image:Image2
-        },
-        {
-            id:3,
-            image:Image3
-        },
-        {
-            id:4,
-            image:Image4
-        },
-        {
-            id:5,
-            image:Image5
-        },
-    ]
+    const [isloading , setIsLoading] = useState(true)
+    const {id} = useParams()
+    const [singleProduct , setSingleProduct] = useState([])
+
+    const fetchProduct =  ()=>{
+        setIsLoading(true)
+        axios({
+            method:'GET',
+            url:`https://course-api.com/react-store-single-product?id=${id}`,
+         }).then((response)=>{
+           setSingleProduct(response.data)
+           setIsLoading(false)
+         }).catch((error)=>{
+            console.log(error)
+         })
+    }
+    useEffect(()=>{
+        fetchProduct()
+    },[id])
     return (
         <section className='single_product_details_container'>
-            <div className="container">
+            {
+                isloading && <Loading/>
+            }
+            {!isloading && <div className="container">
                 <div className="single_product_details">
                     <div className="product_images">
                         <div className="side_images">
                             {
-                                imagesGallary.map((img , index)=>{
-                                    const {id , image} = img
-                                    return <div className="single_gallery_image" onClick={()=>setImageIndex(index)}>
-                                        <img src={image} key={id} alt='product name' />
+                                singleProduct.images.map((img , index)=>{
+                                    const {id , url} = img
+                                    return <div className="single_gallery_image" key={id} onClick={()=>setImageIndex(index)}>
+                                        <img src={url}  alt={`${singleProduct.name}`} />
                                     </div>
                                 })
                             }
                         </div>
                         <div className="main_image">
-                                <img src={imagesGallary[imageIndex].image} alt="product name" />    
+                                <img src={singleProduct.images[imageIndex].url} alt="product name" />    
                         </div>
                     </div>
                     <div className="product_details">
                         <div className="product_name_price">
-                            <h2>Product Name</h2>
-                            <p>$199.99</p>
+                            <h2>{singleProduct.name}</h2>
+                            <p>${singleProduct.price}</p>
                         </div>
                         
                         <div className="colors">
                                 <p>Color :</p>
                                 <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    {
+                                        singleProduct.colors.map((color , index)=>{
+                                            return <li key={index} style={{backgroundColor:color}}></li>
+                                        })
+                                    }
                                 </ul>
                         </div>
                         <div className="quantity_favorits_addTocart">
@@ -81,7 +80,7 @@ const ProductDetails = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </section>
     )
 }
