@@ -26,8 +26,6 @@ const FeatureBroducts = () => {
                         timeout: 500,
                         classNames: 'fade',
                         }}
-                       
-                        
                         breakpoints= {
                             {
                              1024: {

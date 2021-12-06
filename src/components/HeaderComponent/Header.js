@@ -12,7 +12,7 @@ const Header = () => {
                             {/* <Link className="shop_btn" to='/products' > <span></span>  Shop Now </Link> */} 
                             <Link className="shop_btn" to='/products' > 
                                 <svg id="Button" xmlns="http://www.w3.org/2000/svg" width="139" height="39" viewBox="0 0 139 39">
-                                    <text id="Shop_now" data-name="Shop now" transform="translate(61 24)" fill="#fff" font-size="13" font-family="SegoeUI, Segoe UI" letter-spacing="0.08em"><tspan x="0" y="0">SHOP NOW</tspan></text>
+                                    <text id="Shop_now" data-name="Shop now" transform="translate(61 24)" fill="#fff" fontSize="13" fontFamily="SegoeUI, Segoe UI" letterSpacing="0.08em"><tspan x="0" y="0">SHOP NOW</tspan></text>
                                     <circle id="Ellipse_48" data-name="Ellipse 48" cx="19.5" cy="19.5" r="19.5" fill="#1a6eff"/>
                                     <path id="noun_Arrow_Left_2682937" data-name="noun_Arrow Left_2682937" d="M6.663,13.329,1.107,7.768,0,6.661,1.107,5.553,6.663,0,7.77,1.1,3,5.878H15.336V7.443H3L7.77,12.219Z" transform="translate(27 26.65) rotate(180)" fill="#fff"/>
                                 </svg>

@@ -1,10 +1,16 @@
 import React from 'react'
 import './ProductDescription.style.scss'
-import { FaStar , FaStarHalfAlt  , FaRegUser} from "react-icons/fa";
+import { FaStar , FaStarHalfAlt  , FaRegUser , FaRegStar} from "react-icons/fa";
 import user1 from '../../assets/users/user1.png'
 import user2 from '../../assets/users/user2.png'
 import user3 from '../../assets/users/user3.png'
-const ProductReview = () => {
+const ProductReview = ({stars , reviews}) => {
+    const reviewStars = Array.from({length:5} , (_,index)=>{
+        const number = index + .5
+        return <li key = {index}>
+            {stars>= index+1 ? <FaStar/> : stars >= number ? <FaStarHalfAlt/> : <FaRegStar/>}
+        </li>
+    })
     return (
         <section>
             <div className="reviews_container">
@@ -12,19 +18,15 @@ const ProductReview = () => {
                     <div className="all_ratings_content">
                         <div className="total_revirws_rating">
                             <div className="score">
-                                <p>4.5</p>
+                                <p>{stars}</p>
                             </div>
                             <div className="stars">
                                 <ul>
-                                    <li><FaStar/></li>
-                                    <li><FaStar/></li>
-                                    <li><FaStar/></li>
-                                    <li><FaStar/></li>
-                                    <li><FaStarHalfAlt/></li>
+                                   {reviewStars}
                                 </ul>
                             </div>
                             <div className="all_reviews_counter">
-                                    <p><FaRegUser/> 30 all reviews</p>
+                                    <p><FaRegUser/> {reviews} all reviews</p>
                             </div>
                         </div>
                         <div className="single_stare_rate">

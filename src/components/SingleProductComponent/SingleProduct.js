@@ -2,6 +2,7 @@ import React from 'react'
 import './singleProduct.style.scss'
 import { FaHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import {currencyFormater} from '../../utils/helpers'
 const SingleProduct = ({id ,image , name , colors , price}) => {
     return (
         <article>
@@ -16,7 +17,7 @@ const SingleProduct = ({id ,image , name , colors , price}) => {
                     </div>
                     <div className="info_cont">
                         <p className='product_name'>{name}</p>
-                        <p className='price'>${price}</p>
+                        <p className='price'>{currencyFormater(price)}</p>
                         <div className="product_colors">
                             <p>Colors</p>
                             <ul>
@@ -26,7 +27,7 @@ const SingleProduct = ({id ,image , name , colors , price}) => {
                             </ul>
                         </div>
                         <div className="btn_container">
-                            <Link className='nav_btn' to={`/product/${id}`}>
+                            <Link className='nav_btn' to={`/products/${id}`}>
                                 <button className='by_now_btn'>By Now</button>
                             </Link>
                         </div>

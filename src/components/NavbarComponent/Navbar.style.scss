@@ -36,18 +36,118 @@
       justify-content: space-around;
       align-items: center;
       list-style-type: none;
-      gap: 20px;
+      gap: 30px;
       li {
         .nav_btn {
           text-decoration: none;
           color: var(--main-text-color);
           cursor: pointer;
+          position: relative;
           &:hover {
             color: $mainHoverColor;
           }
-        }
-        .active_nav{
-          color: $mainHoverColor !important;
+          .log_out_menu{
+            border-color: transparent;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            &:focus,
+            &:active {
+                  .dropmenu {
+                    transform: translate(0, 20px);
+                    opacity: 1;
+                    visibility: visible;
+                  }
+              }
+            img{
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+            .dropmenu{
+              position: absolute;
+              width: 250px;
+              top: 34px;
+              left: -150px;
+              display: grid;
+              align-items: center;
+              gap: 10px;
+              background-color: var(--second-item-bag);
+              opacity: 0;
+              visibility: hidden;
+              transition: all .3s ease;
+              padding: 10px;
+              border-radius: 20px;
+              .image_name{
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                width: 100%;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 20px;
+                &:hover{
+                  background-color: rgba(128, 128, 128, 0.336);
+                }
+              .userImage{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                overflow: hidden;
+                img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              .user_name{
+                font-size: 1em;
+                color: var(--main-text-color);
+                font-weight: 500;
+                text-transform: capitalize;
+              }
+              }
+              hr{
+                width: 80%;
+                border-color: var(--main-text-color);
+                margin: auto;
+              }
+              .log_out_btn{
+                border-color: transparent;
+                background-color: var(--second-item-bag);
+                font-size: 1em;
+                color: var(--main-text-color);
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-align: left;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                &:hover{
+                  background-color: rgba(128, 128, 128, 0.336);
+                  
+                }
+              }
+            }
+          }
+          .cart_length{
+            position: absolute;
+            top: -19px;
+            right: -19px;
+            color: white;
+            font-weight: 400;
+            background-color: tomato;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            
+
+          }
         }
       }
     }
@@ -103,6 +203,7 @@
         }
       }
       .second_nav {
+        gap: 20px;
         li {
           .nav_btn {
             text-decoration: none;
@@ -110,6 +211,11 @@
             &:hover {
               color: $mainHoverColor;
             }
+          }
+          .cart_length{
+            font-weight: 300;
+            padding: 1px;
+
           }
         }
       }

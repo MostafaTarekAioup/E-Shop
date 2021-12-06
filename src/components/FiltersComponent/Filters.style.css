@@ -154,21 +154,31 @@ main .second_filters_icon {
   height: 0;
 }
 
-.filters_component .catagories .catagories_content ul {
-  padding: 10px;
-  list-style-type: none;
+.filters_component .catagories .catagories_content div {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  margin-left: 10px;
 }
 
-.filters_component .catagories .catagories_content ul li {
-  padding: 10xp 20px;
-  font-size: 1em;
+.filters_component .catagories .catagories_content div button {
+  border-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: transparent;
   color: var(--main-text-color);
-  font-weight: 400;
   cursor: pointer;
-  margin: 10px 0;
+  font-size: 1em;
+  font-weight: 400;
 }
 
-.filters_component .catagories .catagories_content ul li:hover {
+.filters_component .catagories .catagories_content div button:hover {
+  color: #1a6eff;
+  text-decoration: underline;
+}
+
+.filters_component .catagories .catagories_content div .active {
   color: #1a6eff;
   text-decoration: underline;
 }
@@ -191,6 +201,40 @@ main .second_filters_icon {
   margin: 0 10px;
 }
 
+.filters_component .catagories .catagories_content .colors_filter .colors_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filters_component .catagories .catagories_content .colors_filter .colors_container button {
+  padding: 8px;
+  border-radius: 50%;
+  -webkit-filter: blur(0.8px);
+          filter: blur(0.8px);
+}
+
+.filters_component .catagories .catagories_content .colors_filter .colors_container button:hover {
+  border: 3px solid var(--hover-color);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.filters_component .catagories .catagories_content .colors_filter .colors_container .active_color {
+  border: 3px solid var(--hover-color);
+  text-decoration: underline;
+  color: var(--hover-color);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.filters_component .catagories .catagories_content .colors_filter .colors_container button:nth-of-type(1) {
+  border: 3px solid transparent;
+}
+
 .filters_component .catagories .catagories_content .colors_filter ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,30 +246,19 @@ main .second_filters_icon {
 }
 
 .filters_component .catagories .catagories_content .colors_filter ul .color {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .filters_component .catagories .catagories_content .colors_filter ul .color:hover {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-}
-
-.filters_component .catagories .catagories_content .colors_filter ul .red {
-  background-color: red;
-}
-
-.filters_component .catagories .catagories_content .colors_filter ul .green {
-  background-color: #08a5d4;
-}
-
-.filters_component .catagories .catagories_content .colors_filter ul .blue {
-  background-color: #7603c4;
-}
-
-.filters_component .catagories .catagories_content .colors_filter ul .white {
-  background-color: #d609c5;
+  border: 2px solid var(--hover-color);
 }
 
 .filters_component .catagories .catagories_content .Price_range {

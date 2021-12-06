@@ -112,22 +112,30 @@ main {
     .catagories_content {
       overflow: hidden;
       height: 0;
-      //   transition: all linear 0.3s;
-      ul {
-        padding: 10px;
-        list-style-type: none;
-        li {
-          padding: 10xp 20px;
-          font-size: 1em;
+      //   transition: all linear 0.3s;d
+      div{
+        display: grid;
+        gap: 10px;
+        margin-left: 10px;
+        button{
+          border-color: transparent;
+          width: fit-content;
+          background-color: transparent;
           color: var(--main-text-color);
-          font-weight: 400;
           cursor: pointer;
-          margin: 10px 0;
-          &:hover {
+          font-size: 1em;
+          font-weight: 400;
+          &:hover{
             color: #1a6eff;
             text-decoration: underline;
           }
+          
         }
+        .active{
+          color: #1a6eff;
+          text-decoration: underline;
+        }
+        
       }
       select {
         width: 200px;
@@ -144,32 +152,48 @@ main {
       }
       .colors_filter {
         margin: 0 10px;
+        .colors_container{
+          display: flex;
+          align-items: center;
+          button{
+            padding: 8px;
+            border-radius: 50%;
+            filter: blur(.8px);
+            &:hover {
+              border: 3px solid var(--hover-color);
+              filter: blur(0px);
+            }
+          }
+          .active_color{
+            border: 3px solid var(--hover-color);
+            text-decoration: underline;
+            color: var(--hover-color);
+            filter: blur(0px);
+          }
+          button:nth-of-type(1) {
+            border: 3px solid transparent;
+            
+          }
+        }
+        
+        //////////
         ul {
           display: flex;
-
           align-items: center;
           gap: 10px;
           .color {
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             border-radius: 50%;
-            // position: relative;
+            align-items: center;
+            justify-content: center;
+            
             &:hover {
-              filter: blur(1px);
+              border: 2px solid var(--hover-color);
             }
+            
           }
-          .red {
-            background-color: red;
-          }
-          .green {
-            background-color: rgb(8, 165, 212);
-          }
-          .blue {
-            background-color: rgb(118, 3, 196);
-          }
-          .white {
-            background-color: rgb(214, 9, 197);
-          }
+          
         }
       }
       .Price_range {

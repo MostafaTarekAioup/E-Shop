@@ -41,7 +41,7 @@
 .header .Header_mask .pills {
   position: absolute;
   width: 80%;
-  background-color: var(--item-background);
+  background-color: var(--second-item-bag);
   bottom: 0;
   left: 0;
   padding: 20px;

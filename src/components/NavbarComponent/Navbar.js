@@ -1,25 +1,19 @@
-import React , {useEffect} from 'react'
+import React , {useEffect , useState} from 'react'
 import { Link  , NavLink} from 'react-router-dom'
-import { FaBars , FaUserAlt , FaShoppingCart ,FaMoon , FaSun} from "react-icons/fa";
+import { FaBars , FaUserAlt , FaShoppingCart ,FaMoon , FaSun , FaSignOutAlt} from "react-icons/fa";
 import './Navbar.style.scss'
 import {useGlopalContext} from '../../ContextAPI/context'
+import { useSelector } from 'react-redux';
 const Navbar = () => {
-    const {isSubmenuOpen , setIsSubmenuOpen  , setNavbarColor , isDark , setIsDark} = useGlopalContext()
-    const toggleVisibility = () => {
-    if (window.pageYOffset > 50) {
-      setNavbarColor(true)
-    } else {
-     setNavbarColor(false)
-    }
-  }
-  useEffect(()=>{
-      window.addEventListener("scroll", toggleVisibility);
-  },[])
-  
+    const {isSubmenuOpen , setIsSubmenuOpen  , isDark , setIsDark , loginWithRedirect , logout,appUser , isAuthenticated} = useGlopalContext()
+    const totalItems = useSelector((state)=> state.cart.total_items)
+    
+    // get theme from local storage
   useEffect(()=>{
     document.documentElement.className = isDark
     localStorage.setItem('theme' , isDark)
   },[isDark])
+console.log(appUser)
 return <>
     <div className='Navbar'>
         <div className="container">
@@ -34,7 +28,6 @@ return <>
                     </p>
                 </div>
             </Link>
-
             <ul className='Nav_links'>
                 <li>    
                     <NavLink
@@ -74,12 +67,38 @@ return <>
                 <li>
                      <Link className='nav_btn' to='/cart'>
                         <FaShoppingCart/>
+                        {
+                            totalItems > 0 && <span className='cart_length'>{totalItems}</span>
+                        }
                     </Link>
                 </li>
                 <li>
-                     <Link className='nav_btn' to='/privateRoute'>
-                        <FaUserAlt/>
-                    </Link>
+                    {
+                        !isAuthenticated && 
+                            <div className="nav_btn" onClick={loginWithRedirect} title='Log In'>
+                                <FaUserAlt/>
+                            </div>
+                    }
+                    {
+                        isAuthenticated && 
+                            <div className="nav_btn" title='Log Out'>
+                                <button className='log_out_menu'>
+                                    { appUser !== null && <img src={appUser.picture} alt={appUser.nickname} />}
+                                    <div className="dropmenu">
+                                        <div className="image_name">
+                                            <div className="userImage">
+                                                { appUser !== null && <img src={appUser.picture} alt={appUser.nickname} />}
+                                            </div>
+                                            <div className="user_name">
+                                                    { appUser !== null && <p>{appUser.nickname}</p>}
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <button className='log_out_btn' title='log out'  onClick={()=>logout({returnTo:window.location.origin})}> <FaSignOutAlt/>Log Out</button>
+                                    </div>
+                                </button>
+                            </div>
+                    }
                 </li>
                 <li>
                      <p className='nav_btn'>

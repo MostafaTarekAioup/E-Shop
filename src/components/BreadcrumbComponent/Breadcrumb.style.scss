@@ -4,6 +4,12 @@
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  font-size: .9em;
+  font-size: 1em;
   color: var(--main-text-color);
+    .link_btn{
+      color: var(--hover-color);
+      text-decoration: none;
+      padding: 0px 10px;
+    }
+  
 }

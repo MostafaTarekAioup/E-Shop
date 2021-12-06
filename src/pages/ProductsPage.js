@@ -3,16 +3,18 @@ import {Filters , BreadCrumb , ProductsContainer , Loading} from '../components'
 import '../components/FiltersComponent/Filters.style.scss'
 import {  FaCog } from "react-icons/fa";
 import { useGlopalContext } from '../ContextAPI/context';
+import { useSelector } from 'react-redux';
 const ProductsPage = () => {
-    const {isFilterActive , setIsFilterActive , loading } = useGlopalContext()
+    const {isFilterActive , setIsFilterActive} = useGlopalContext()
+    const isLoading = useSelector((state)=> state.products.isProductsLoading)
     return (
         <main>
             {
-                loading && <Loading/>
+                isLoading && <Loading/>
             }
-            {!loading && <div className="main">
+            {!isLoading && <div className="main">
                 <div className="bread_crumb">
-                    <BreadCrumb/>
+                    <BreadCrumb title='products'/>
                 </div>
                 <div className="second_filters_icon" onClick={()=>setIsFilterActive(!isFilterActive)}>
                     <FaCog/>

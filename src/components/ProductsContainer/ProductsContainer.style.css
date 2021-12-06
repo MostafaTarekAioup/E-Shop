@@ -10,11 +10,11 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto 1fr auto;
-      grid-template-columns: auto auto 1fr auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -79,6 +79,22 @@
   border-radius: 5px;
 }
 
+.no_match_products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+  color: var(--main-text-color);
+  text-shadow: 2px 2px 5px var(--second-font-color);
+}
+
 @media only screen and (max-width: 700px) {
   .all_products_container {
     -ms-grid-columns: (minmax(10rem, 1fr))[auto-fill];
@@ -93,9 +109,9 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 20px;
     padding: 0;
     margin: 10px 0;
