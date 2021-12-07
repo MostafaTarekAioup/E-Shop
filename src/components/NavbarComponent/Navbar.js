@@ -87,10 +87,10 @@ return <>
                                     <div className="dropmenu">
                                         <div className="image_name">
                                             <div className="userImage">
-                                                { appUser !== null && <img src={appUser.picture} alt={appUser.nickname} />}
+                                                { appUser  && <img src={appUser.picture} alt={appUser.nickname} />}
                                             </div>
                                             <div className="user_name">
-                                                    { appUser !== null && <p>{appUser.nickname}</p>}
+                                                    { appUser && <p>{appUser.nickname}</p>}
                                             </div>
                                         </div>
                                         <hr />

@@ -1,6 +1,6 @@
 import React from 'react'
 import './banners.style.scss'
-
+import { Link } from 'react-router-dom'
 const Banners = () => {
     return (
         <section className='banners'>
@@ -11,7 +11,9 @@ const Banners = () => {
                         <div className="banner_info">
                             <div>
                                 <p>New collection <br /> available now</p>
-                                <button>View All</button>
+                                <Link to='/products'>
+                                    <button>View All</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -20,7 +22,9 @@ const Banners = () => {
                         <div className="banner_info">
                             <div>
                                 <p>Redefining the <br /> modern design</p>
-                                <button>check more</button>
+                                <Link to='/products'>
+                                    <button>check more</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

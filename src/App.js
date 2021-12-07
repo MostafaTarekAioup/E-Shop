@@ -5,7 +5,7 @@ import { BrowserRouter as Router , Switch , Route } from 'react-router-dom';
 import {productsSliceActions} from './redux/ProductSlice'
 import { cartSliceActions } from './redux/cardSlice';
 import {useSelector , useDispatch} from 'react-redux'
-import {ScrollToTop,Navbar,Sidebar ,Footer} from './components'
+import {ScrollToTop,Navbar,Sidebar ,Footer , ScrollTOTopPage} from './components'
 import axios from 'axios'
 function App() {
     const dispatch = useDispatch()
@@ -69,19 +69,18 @@ useEffect(()=>{
           {/* // SinglrProduct Page  */}
          <Route exact  path='/products/:id' children={<SinglrProduct/>}/>
           {/* // CheckOut Page  */}
-         <Route exact  path='/checkOut'>
+         <PrivateRoute exact  path='/checkOut'>
             <CheckOut/>
-        </Route>
+        </PrivateRoute>
          {/* // Private Route Page  */}
-         <Route exact  path='/privateRoute'>
-            <PrivateRoute/>
-        </Route>
+         
         {/* // Error Route Page  */}
          <Route  path='*'>
             <Error/>
         </Route>
       </Switch>
       <Footer/>
+      <ScrollTOTopPage/>
     </Router>
   </>
 }

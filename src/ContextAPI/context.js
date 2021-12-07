@@ -29,7 +29,7 @@ const AppProvider = ({children})=>{
        if(isAuthenticated){
            setAppUser(user)
        }else{
-        setAppUser(null)
+        setAppUser([])
        }
         // eslint-disapeled
     },[isAuthenticated])

@@ -1,0 +1,36 @@
+.scroll_to_top_container {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: var(--hover-color);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5em;
+  z-index: 10;
+  cursor: pointer;
+  visibility: hidden;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  opacity: 0;
+}
+
+.scroll_to_top_container:hover {
+  background-color: #033488;
+}
+
+.active_scroll_par {
+  visibility: visible;
+  opacity: 1;
+}
+/*# sourceMappingURL=scrollToTop.style.css.map */

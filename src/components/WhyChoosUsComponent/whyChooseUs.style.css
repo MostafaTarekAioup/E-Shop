@@ -28,12 +28,9 @@
 
 .why_us .advantages .advantage {
   line-height: 30px;
-  -webkit-box-shadow: 1px 1px 3px gray;
-          box-shadow: 1px 1px 3px gray;
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
   padding: 10px;
-  background-color: var(--second-item-bag);
 }
 
 .why_us .advantages .advantage:hover .advantage_icon {
@@ -65,6 +62,8 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 2em;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 .why_us .advantages .advantage .advantage_details h4 {

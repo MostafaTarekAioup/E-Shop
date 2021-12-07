@@ -20,5 +20,18 @@ import SelectedForU from './SelectedForUComponent/SelectedForU'
 import CartComponent from './CartComponent/CartComponent'
 import  CheckOut from '../components/CheckOutComponent/CheckOut'
 import Loading from './LoadingComponent/Loading'
+import ScrollTOTopPage from './ScrollToTop/ScrollToTop'
 
-export {Loading,CheckOut,CartComponent,SelectedForU,ProductDecAndReviewIndex,ProductDetails,ScrollToTop,ProductsContainer,BreadCrumb,Filters,Navbar ,Sidebar ,Footer , Header,Banners , FeatureBroducts , SingleProduct , WhyChooseUs,TodayProducts , Subscripe , UnderConstyuction , ApoutUs} 
+export {ScrollTOTopPage,Loading,
+    CheckOut,CartComponent,
+    SelectedForU,ProductDecAndReviewIndex,
+    ProductDetails,ScrollToTop,
+    ProductsContainer,BreadCrumb,
+    Subscripe , UnderConstyuction , 
+    FeatureBroducts , SingleProduct ,
+    WhyChooseUs,TodayProducts ,
+    Filters,Navbar ,
+    Sidebar ,Footer ,
+    Header,Banners , 
+    ApoutUs
+    } 

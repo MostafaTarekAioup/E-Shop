@@ -19,10 +19,10 @@
 
     .advantage {
       line-height: 30px;
-      box-shadow: 1px 1px 3px gray;
+      // box-shadow: 1px 1px 3px gray;
       transition: all linear 0.3s;
       padding: 10px;
-      background-color: var(--second-item-bag);
+      // background-color: var(--second-item-bag);
       &:hover .advantage_icon {
         color: #1a6eff;
         background-color: #e1ecff;
@@ -44,6 +44,7 @@
         justify-content: center;
         align-items: center;
         font-size: 2em;
+        transition: all .3s linear;
       }
       .advantage_details {
         h4 {
