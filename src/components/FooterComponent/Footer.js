@@ -17,11 +17,11 @@ const Footer = () => {
                             </h3> 
                             <p>High quality Scandinavian furniture made from eco-friendly materials. Designed for modern, minimalist apartments</p>
                             <div className="social_icons">
-                                <a href="##" className='social_icon'><FaFacebookF/></a>
-                                <a href="##" className='social_icon'><FaTwitter/></a>
-                                <a href="##" className='social_icon'><FaLinkedinIn/></a>
-                                <a href="##" className='social_icon'><FaInstagram/></a>
-                                <a href="##" className='social_icon'><FaYoutube/></a>
+                                <a href="##" aria-label='facebook page' className='social_icon'><FaFacebookF/></a>
+                                <a href="##" aria-label='twitter page' className='social_icon'><FaTwitter/></a>
+                                <a href="##" aria-label='linkedin page' className='social_icon'><FaLinkedinIn/></a>
+                                <a href="##" aria-label='instagram page' className='social_icon'><FaInstagram/></a>
+                                <a href="##" aria-label='youtube page' className='social_icon'><FaYoutube/></a>
                             </div>
                     </div>
                     <div className="footer_groups">

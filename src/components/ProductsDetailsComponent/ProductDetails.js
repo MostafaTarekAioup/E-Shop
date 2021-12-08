@@ -96,9 +96,9 @@ const ProductDetails = ({ id ,description  , images , name , price , colors ,ima
                             <div className="add_to_cart_btn" onClick={()=>addToCartHanddler(name  , price , colors[currentColor] ,id , new Date().getTime().toString() , description , amount , stock ,images[0].url)}>
                                 <button>Add to cart</button>
                             </div>
-                            <div className="favorits_btn ">
+                            {/* <div className="favorits_btn ">
                                 <FaHeart  />
-                            </div>
+                            </div> */}
                         </div>}
                         {
                             stock <= 0 && <div className='out_of_stock'>

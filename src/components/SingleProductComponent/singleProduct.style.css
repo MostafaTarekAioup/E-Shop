@@ -58,7 +58,7 @@
 }
 
 .Product .product_link .productLink_icon:hover {
-  color: tomato;
+  color: var(--hover-color);
 }
 
 .Product .Product_info {
@@ -98,6 +98,7 @@
   font-weight: 500;
   color: white;
   text-transform: capitalize;
+  text-shadow: 2px 2px 5px black;
   letter-spacing: 2px;
   font-size: 1rem;
   margin: 10px 0;
@@ -107,7 +108,7 @@
 
 .Product .Product_info .info_cont .price {
   font-weight: 400;
-  color: tomato;
+  color: var(--second-hover-color);
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
   opacity: 0;
@@ -171,7 +172,7 @@
   visibility: hidden;
   -webkit-transition: linear all 0.3s;
   transition: linear all 0.3s;
-  background-color: tomato;
+  background-color: var(--hover-color);
   color: white;
   cursor: pointer;
 }

@@ -78,8 +78,8 @@
 }
 
 .subscripe_container .mask .subcripe form button:hover {
-  background-color: white;
-  color: #1a6eff;
+  background-color: #0447bb;
+  color: white;
 }
 
 @media only screen and (max-width: 800px) {

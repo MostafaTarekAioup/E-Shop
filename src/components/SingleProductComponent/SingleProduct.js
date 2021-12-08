@@ -12,9 +12,9 @@ const SingleProduct = ({id ,image , name , colors , price}) => {
                 </div>
                 
                 <div className="Product_info">
-                    <div className="product_link">  
+                    {/* <div className="product_link">  
                         <FaHeart className='productLink_icon'/>
-                    </div>
+                    </div> */}
                     <div className="info_cont">
                         <p className='product_name'>{name}</p>
                         <p className='price'>{currencyFormater(price)}</p>
@@ -27,7 +27,7 @@ const SingleProduct = ({id ,image , name , colors , price}) => {
                             </ul>
                         </div>
                         <div className="btn_container">
-                            <Link className='nav_btn' to={`/products/${id}`}>
+                            <Link className='nav_btn' aria-label={`buy ${name} now`} to={`/products/${id}`}>
                                 <button className='by_now_btn'>By Now</button>
                             </Link>
                         </div>

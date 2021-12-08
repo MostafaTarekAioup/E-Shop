@@ -1,9 +1,9 @@
 import React from 'react'
-import {UnderConstyuction} from '../components'
+import {Payment} from '../components'
 const CheckOutPage = () => {
     return (
         <main>
-            <UnderConstyuction/>
+           <Payment/>
         </main>
     )
 }

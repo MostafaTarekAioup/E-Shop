@@ -41,13 +41,13 @@
             padding: 10px 30px;
             text-transform: capitalize;
             border-color: transparent;
-            background-color: #53b5aa;
+            background-color: var(--hover-color);
             border-radius: 5px;
             transition: .3s;
             cursor: pointer;
-            color: var(--main-text-color);
+            color: white;
             &:hover{
-                background-color: #096e63;
+                background-color: #02338d;
                 color: white;
 
             }

@@ -90,6 +90,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: capitalize;
 }
 
 .single_cart_item_container .cart_item .product_details .product_name_description .product_name .name {
@@ -131,7 +132,7 @@
 
 .single_cart_item_container .cart_item .product_details .product_name_description .more_btn {
   cursor: pointer;
-  color: tomato;
+  color: var(--second-hover-color);
   margin: 5px;
 }
 
@@ -173,7 +174,7 @@
 }
 
 .single_cart_item_container .cart_item .product_details .product_price_container .product_amount .btn:hover {
-  background-color: #53b5aa;
+  background-color: var(--hover-color);
   color: white;
 }
 
@@ -210,7 +211,7 @@
   font-size: 1.3em;
   font-weight: 400;
   color: white;
-  background-color: #53b5aa;
+  background-color: var(--hover-color);
   height: 100%;
 }
 
@@ -258,15 +259,17 @@
   width: -moz-fit-content;
   width: fit-content;
   border-color: transparent;
-  background-color: var(--second-hover-color);
+  background-color: var(--hover-color);
   font-size: 1.2em;
   margin: auto;
-  color: var(--main-text-color);
+  color: white;
   padding: 5px 10px;
   letter-spacing: 5px;
   text-transform: capitalize;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
 }
 
 .empty_cart div .cart_btn button:hover {
@@ -302,15 +305,17 @@
   font-size: 1.5em;
   color: white;
   cursor: pointer;
-  background-color: tomato;
+  background-color: var(--hover-color);
   letter-spacing: 2px;
   border-color: transparent;
   border-radius: 10px;
   margin: auto;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
 }
 
 .clear_cart .clear_cart_btn:hover {
-  background-color: #ff2600;
+  background-color: #f7664c;
 }
 
 @media only screen and (max-width: 550px) {
@@ -342,7 +347,7 @@
     height: 100%;
   }
   .single_cart_item_container .cart_item .product_details .product_price_container .product_amount .btn:hover {
-    background-color: #53b5aa;
+    background-color: var(--hover-color);
   }
   .single_cart_item_container .cart_item .product_details .product_price_container .product_price {
     gap: 0;

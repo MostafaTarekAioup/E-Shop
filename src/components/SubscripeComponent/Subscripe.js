@@ -13,7 +13,7 @@ const Subscripe = () => {
                         <form action="POST" onSubmit={onSubmetHandller}>
                            <div className="input_group">
                                 <label htmlFor="Email">
-                                    <input type="email" id='Email' required  />
+                                    <input type="email" id='Email' aria-label='subscripe' required  />
                                 </label>
                            </div>
                             <div className="submit">

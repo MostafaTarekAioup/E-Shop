@@ -134,17 +134,18 @@
           }
           .cart_length{
             position: absolute;
-            top: -19px;
-            right: -19px;
+            top: -15px;
+            right: -15px;
             color: white;
-            font-weight: 400;
-            background-color: tomato;
-            width: 25px;
-            height: 25px;
+            font-weight: 300;
+            background-color: var(--hover-color);
+            width: 20px;
+            height: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
+            font-size: .8em;
             
 
           }

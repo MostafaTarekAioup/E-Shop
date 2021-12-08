@@ -68,7 +68,7 @@ return <>
                      <Link className='nav_btn' to='/cart'>
                         <FaShoppingCart/>
                         {
-                            totalItems > 0 && <span className='cart_length'>{totalItems}</span>
+                            totalItems > 0 && <span className='cart_length'><span>{totalItems}</span></span>
                         }
                     </Link>
                 </li>

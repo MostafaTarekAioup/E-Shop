@@ -345,7 +345,7 @@ main .second_filters_icon {
   }
   .filters_component .filters_icon {
     visibility: visible;
-    top: 60px;
+    top: 80px;
   }
   .products_page_container {
     -ms-grid-columns: 1fr;

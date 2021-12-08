@@ -26,7 +26,7 @@
                 }
                 .active_image{
                     filter: grayscale(0);
-                    border: 2px solid var(--second-hover-color);
+                    border: 5px solid var(--hover-color);
                 }
                 
             }
@@ -124,8 +124,8 @@
                     button{
                         width: 100%;
                         border-color: transparent;
-                        background-color: #FBB03B;
-                        color: var(--main-text-color);
+                        background-color: var(--hover-color);
+                        color: white;
                         font-size: 1.2em;
                         word-spacing: 2px;
                         font-weight: 400;
@@ -135,7 +135,7 @@
                         transition: .3s;
                         cursor: pointer;
                         &:hover{
-                            background-color: #fa9b03;
+                            background-color: #0345b8;
                             color: white;
                             
                         }
@@ -153,9 +153,9 @@
                     margin-left: 20px;
                     transition: .3s;
                     cursor: pointer;
-                    color: var(--main-text-color);
+                    color: var(--hover-color);
                     &:hover{
-                        background-color: #fa9b03;
+                        background-color: var(--hover-color);
                         color: white;
                     }
                     

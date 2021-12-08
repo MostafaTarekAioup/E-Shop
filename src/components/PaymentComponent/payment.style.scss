@@ -1,0 +1,173 @@
+.shipping_information{
+    margin-top: 70px;
+   
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    .title{
+        width: 100%;
+        text-align: center;
+        margin: 40px 0;
+        h4{
+            font-size: 1.3em;
+            font-weight: 400;
+            color: white;
+            text-transform: capitalize;
+            text-shadow: 2px 2px 5px var(--second-font-color);
+        }
+    }
+    .mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../../assets/apoutImg.webp);
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(5px);
+        top: 0;
+        left: 0;
+        z-index: 2;
+        
+    }
+    .mask2{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.384);
+        top: 0;
+        left: 0;
+        z-index: 3;
+        
+    }
+    .shipping_details{
+        position: relative;
+        z-index: 4;
+        // margin-top: 50px;
+
+            form{
+                display: grid;
+                .input_group{
+                    position: relative;
+                    .inputLabel{
+                        position: absolute;
+                        text-shadow: 1px 1px 3px gray;
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                        top: 13px;
+                        left: 40px;
+                        z-index: 2;
+                        transition: all ease .3s;
+                        font-weight: 300;
+                        color: black;
+                    }
+                    input{
+                        width: 100%;
+                        position: relative;
+                        background-color: transparent;
+                        height: 50px;
+                        border-radius: 50px;
+                        border-color: transparent;
+                        outline: transparent;
+                        font-size: 1em;
+                        padding: 0 20px;
+                        border: 1px solid var(--second-font-color);
+                        z-index: 1;
+                        background-color: white;
+                    }
+                    .active_inputLabel{
+                        top: -25px;
+                        left: 20px;
+                        color: white;
+                    } 
+                }
+                .adressAndPaymentDetails{
+                    display: grid ;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 20px;
+                }
+                .adress_details{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 40px;
+                    
+                }
+                .payment_details{
+                    display: grid;
+                    gap: 40px;
+                    .card_exp{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
+                    }
+                }
+            }
+        .submit{
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+            button{
+                color: white;
+                border-color: transparent;
+                padding:10px 50px;
+                font-size: 1.5em;
+                border-radius: 10px;
+                text-transform: capitalize;
+                cursor: pointer;
+                background-color: var(--hover-color);
+                transition: .3s ease;
+                &:hover{
+                    background-color: #0043b8 ;
+                }
+            }
+        }
+    }
+}
+.thanks_for{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    text-align: center;
+    h4{
+        font-size: 1.3em;
+        color: var(--main-text-color);
+        text-shadow: 2px 2px 5px var(--second-font-color);
+        text-transform: capitalize;
+    }
+    p{
+        font-size: 1em;
+        color: var(--main-text-color);
+        text-shadow: 2px 2px 5px var(--second-font-color);
+        text-transform: capitalize;
+    }
+}
+@media only screen and (max-width:900px){
+    .shipping_information{
+        .shipping_details{
+                form{
+                    .adressAndPaymentDetails{
+                        grid-template-columns: 1fr;
+                    }
+                }
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .shipping_information{
+        .shipping_details{
+                form{
+                    .adress_details{
+                        grid-template-columns: 1fr ;
+                    }
+                    .payment_details{
+                        .card_exp{
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+        }
+    }
+}

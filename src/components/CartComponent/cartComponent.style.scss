@@ -58,6 +58,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    text-transform: capitalize;
                     .name{
                         font-size: 1.5em;
                         font-weight: 400;
@@ -93,7 +94,7 @@
                 }
                 .more_btn{
                     cursor: pointer;
-                    color: tomato;
+                    color: var(--second-hover-color);
                     margin: 5px;
                 }
             }
@@ -119,7 +120,7 @@
                     }
                     .btn{
                         &:hover{
-                            background-color: #53b5aa;
+                            background-color: var(--hover-color);
                             color: white;
                         }
                     }
@@ -143,7 +144,7 @@
                         font-size: 1.3em;
                         font-weight: 400;
                         color: white;
-                        background-color: #53b5aa;
+                        background-color: var(--hover-color);
                         height: 100%;
                     }
                 }
@@ -178,15 +179,16 @@
             button{
                 width: fit-content;
                 border-color: transparent;
-                background-color: var(--second-hover-color);
+                background-color: var(--hover-color);
                 font-size: 1.2em;
                 margin: auto;
-                color: var(--main-text-color);
+                color: white;
                 padding: 5px 10px;
                 letter-spacing: 5px;
                 text-transform: capitalize;
                 border-radius: 10px;
                 cursor: pointer;
+                transition: ease .3s;
                 &:hover{
                     background-color: var(--main-text-color);
                     color: var(--second-hover-color);
@@ -205,19 +207,21 @@
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+    
     .clear_cart_btn{
         width: fit-content;
         padding: 10px 20px;
         font-size: 1.5em;
         color: white;
         cursor: pointer;
-        background-color: tomato;
+        background-color: var(--hover-color);
         letter-spacing: 2px;
         border-color: transparent;
         border-radius: 10px;
         margin: auto;
+        transition: ease .5s;
         &:hover{
-            background-color: rgb(255, 38, 0);
+            background-color: rgb(247, 102, 76);
 
         }
     }
@@ -256,7 +260,7 @@
                         }
                         .btn{
                             &:hover{
-                                background-color: #53b5aa;
+                                background-color: var(--hover-color);
                             }
                         }
                     }

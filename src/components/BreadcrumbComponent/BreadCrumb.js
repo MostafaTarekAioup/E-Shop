@@ -7,8 +7,8 @@ const BreadCrumb = ({title , product}) => {
         <section>
                 <div className="container">
                     <div className="breadCrumb_container">
-                        <Link className='link_btn' to='/'><FaHome/></Link>
-                         {product && <Link  className='link_btn' to='/products'>/ Products</Link>}
+                        <Link className='link_btn' aria-label='home link' to='/'><FaHome/></Link>
+                         {product && <Link  className='link_btn' aria-label='products link' to='/products'>/ Products</Link>}
                           / {title} 
                     </div>
                 </div>

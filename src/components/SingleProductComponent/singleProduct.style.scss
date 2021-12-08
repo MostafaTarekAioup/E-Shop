@@ -42,7 +42,7 @@
       font-size: 2em;
       cursor: pointer;
       &:hover {
-        color: tomato;
+        color: var(--hover-color);
       }
     }
   }
@@ -70,8 +70,9 @@
       text-align: center;
       .product_name {
         font-weight: 500;
-        color: white;
+        color: rgb(255, 255, 255);
         text-transform: capitalize;
+        text-shadow: 2px 2px 5px black;
         letter-spacing: 2px;
         font-size: 1rem;
         margin: 10px 0;
@@ -79,7 +80,7 @@
       }
       .price {
         font-weight: 400;
-        color: tomato;
+        color: var(--second-hover-color);;
         transition: all linear 0.3s;
         opacity: 0;
         visibility: hidden;
@@ -121,7 +122,7 @@
         opacity: 0;
         visibility: hidden;
         transition: linear all 0.3s;
-        background-color: tomato;
+        background-color: var(--hover-color);;
         color: white;
         cursor: pointer;
       }

@@ -50,7 +50,7 @@
 .single_product_details_container .single_product_details .product_images .side_images .active_image {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-  border: 2px solid var(--second-hover-color);
+  border: 5px solid var(--hover-color);
 }
 
 .single_product_details_container .single_product_details .product_images .main_image {
@@ -174,8 +174,8 @@
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .add_to_cart_btn button {
   width: 100%;
   border-color: transparent;
-  background-color: #FBB03B;
-  color: var(--main-text-color);
+  background-color: var(--hover-color);
+  color: white;
   font-size: 1.2em;
   word-spacing: 2px;
   font-weight: 400;
@@ -188,7 +188,7 @@
 }
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .add_to_cart_btn button:hover {
-  background-color: #fa9b03;
+  background-color: #0345b8;
   color: white;
 }
 
@@ -211,11 +211,11 @@
   -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
-  color: var(--main-text-color);
+  color: var(--hover-color);
 }
 
 .single_product_details_container .single_product_details .product_details .quantity_favorits_addTocart .favorits_btn:hover {
-  background-color: #fa9b03;
+  background-color: var(--hover-color);
   color: white;
 }
 

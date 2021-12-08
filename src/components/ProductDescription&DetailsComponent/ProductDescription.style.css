@@ -20,7 +20,7 @@
   font-weight: 400;
   padding: 10px 20px;
   border-radius: 50px;
-  border: 1px solid #FBB03B;
+  border: 1px solid var(--hover-color);
   background-color: transparent;
   cursor: pointer;
   color: var(--main-text-color);
@@ -29,12 +29,12 @@
 }
 
 .Product_description_nav .btn:hover {
-  background-color: #FBB03B;
+  background-color: var(--hover-color);
   color: white;
 }
 
 .Product_description_nav .active_btn {
-  background-color: #FBB03B;
+  background-color: var(--hover-color);
   color: white;
 }
 
@@ -201,7 +201,7 @@
 
 .reviews_container .ratings_container .all_ratings_content .total_revirws_rating .stars ul li {
   font-size: 1em;
-  color: #FBB03B;
+  color: var(--hover-color);
 }
 
 .reviews_container .ratings_container .all_ratings_content .total_revirws_rating .all_reviews_counter p {
@@ -246,7 +246,7 @@
 }
 
 .reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .star {
-  color: #FBB03B;
+  color: var(--hover-color);
 }
 
 .reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .progress_par_container {
@@ -258,7 +258,7 @@
 }
 
 .reviews_container .ratings_container .all_ratings_content .single_stare_rate ul li .progress_par_container .progress_bar {
-  background-color: #FBB03B;
+  background-color: var(--hover-color);
   height: 100%;
 }
 
@@ -269,7 +269,7 @@
 
 .reviews_container .ratings_container .add_review_btn button {
   border-color: transparent;
-  background-color: #FBB03B;
+  background-color: var(--hover-color);
   color: var(--main-text-color);
   font-size: 1.1em;
   word-spacing: 2px;
@@ -284,7 +284,7 @@
 }
 
 .reviews_container .ratings_container .add_review_btn button:hover {
-  background-color: #ff9d00;
+  background-color: #0040ad;
   color: white;
 }
 
@@ -343,7 +343,7 @@
 }
 
 .reviews_container .user_reviews ul .single_review .user_review .user_rate ul li {
-  color: #FBB03B;
+  color: var(--hover-color);
 }
 
 .reviews_container .user_reviews ul .single_review .user_review .user_des p {
@@ -367,7 +367,7 @@
     gap: 50px;
   }
   .description_container .description {
-    border-bottom: 1px solid #FBB03B;
+    border-bottom: 1px solid var(--hover-color);
     padding-bottom: 20px;
   }
   .description_container .description h4 {
