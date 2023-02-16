@@ -17,21 +17,33 @@ import ProductDetails from './ProductsDetailsComponent/ProductDetails'
 import ProductDecAndReviewIndex from './ProductDescription&DetailsComponent/ProductDecAndReviewIndex'
 import SelectedForU from './SelectedForUComponent/SelectedForU'
 import CartComponent from './CartComponent/CartComponent'
-import  CheckOut from '../components/CheckOutComponent/CheckOut'
+import CheckOut from '../components/CheckOutComponent/CheckOut'
 import Loading from './LoadingComponent/Loading'
 import ScrollTOTopPage from './ScrollToTop/ScrollToTop'
 import Payment from './PaymentComponent/Payment'
 
-export {ScrollTOTopPage,Loading,
-    CheckOut,CartComponent,
-    SelectedForU,ProductDecAndReviewIndex,
-    ProductDetails,ScrollToTop,
-    ProductsContainer,BreadCrumb,
-    Subscripe , 
-    FeatureBroducts , SingleProduct ,
-    WhyChooseUs,TodayProducts ,
-    Filters,Navbar ,
-    Sidebar ,Footer ,
-    Header,Banners , 
-    ApoutUs , Payment
-    } 
+export {
+  ScrollTOTopPage,
+  Loading,
+  CheckOut,
+  CartComponent,
+  SelectedForU,
+  ProductDecAndReviewIndex,
+  ProductDetails,
+  ScrollToTop,
+  ProductsContainer,
+  BreadCrumb,
+  Subscripe,
+  FeatureBroducts,
+  SingleProduct,
+  WhyChooseUs,
+  TodayProducts,
+  Filters,
+  Navbar,
+  Sidebar,
+  Footer,
+  Header,
+  Banners,
+  ApoutUs,
+  Payment,
+}

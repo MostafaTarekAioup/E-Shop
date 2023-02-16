@@ -2,9 +2,12 @@
   "name": "egy-store",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": "v14.18.0",
-  "npm": "6.14.15"}, 
+  "engines": {
+    "node": "v14.18.0",
+    "npm": "6.14.15"
+  },
   "dependencies": {
+    "automation-unified-frontend": "git+https://hdahshan.c:NDEyNjg4ODI2MzEwOo80KaH0DAVGVCPFoRmQk01lDsjp@vcs.saip.gov.sa/scm/sul/automation-unified-frontend.git#v0.1.0",
     "@auth0/auth0-react": "^1.8.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^5.14.1",
